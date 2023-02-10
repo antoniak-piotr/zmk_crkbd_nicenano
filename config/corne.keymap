@@ -13,13 +13,13 @@
 #define BLUE 1
 #define RED 2
 
-#define SPC_BLU (&lt BLUE SPACE)
-#define ENT_RED (&lt RED ENTER)
-#define BSPC_ALT (&mt RALT BSPC)
-#define SPC_ALT (&mt LALT SPACE)
-#define ENT_CTL (&mt LCTRL ENTER)
-#define ENT_SFT (&mt RSFT ENTER)
-#define UND_WIN (&mt LWIN UNDER)
+#define SPC_BLU &lt BLUE SPACE
+#define ENT_RED &lt RED ENTER
+#define BSPC_ALT &mt RALT BSPC
+#define SPC_ALT &mt LALT SPACE
+#define ENT_CTL &mt LCTRL ENTER
+#define ENT_SFT &mt RSFT ENTER
+#define UND_WIN &mt LWIN UNDER
 
 #define ________ &trans
 #define XXXXXXXX &none
