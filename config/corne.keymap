@@ -57,7 +57,7 @@
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
     XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    &kp LBKT    &kp LT                              &kp LPAR    &kp EQUAL   &kp UP      &kp MINUS   &kp COLON   XXXXXXXX
     XXXXXXXX    Z_SFT       XXXXXXXX    XXXXXXXX    &kp RBKT    &kp GT                              &kp RPAR    &kp LEFT    &kp DOWN    &kp RIGHT   BSL_SFT     XXXXXXXX
-                                                    &kp LWIN    ESC_CTRL    DEL_RED     ________    ENT_ALT     GRV_ALT
+                                                    &kp LWIN    ESC_CTL     DEL_RED     ________    ENT_ALT     GRV_ALT
             >; 
         };
 
@@ -66,7 +66,7 @@
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
     XXXXXXXX    &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     XXXXXXXX
     XXXXXXXX    &kp LSHFT   BT_1        BT_2        BT_3        &kp F11                             &kp F12     XXXXXXXX    XXXXXXXX    &bt BT_CLR  &kp RSHFT   XXXXXXXX
-                                                    &kp LWIN    ESC_CTRL    ________    SPC_BLU     &kp LALT    XXXXXXXX
+                                                    &kp LWIN    ESC_CTL     ________    SPC_BLU     &kp LALT    XXXXXXXX
             >; 
         };
     };
