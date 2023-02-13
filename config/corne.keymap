@@ -47,8 +47,8 @@
         blue_layer {
             bindings = <   
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
-    XXXXXXXX    &kp TAB     &kp UNDER   &kp LBRC    &kp LBKT    &kp LT                              &kp LPAR    &kp LEFT    &kp UP      &kp RIGHT   &kp COLON   XXXXXXXX
-    XXXXXXXX    Z_SFT       &kp MINUS   &kp RBRC    &kp RBKT    &kp GT                              &kp RPAR    &kp EQUAL   &kp DOWN    &kp PLUS    BSL_SFT     XXXXXXXX
+    XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    &kp LBKT    &kp LT                              &kp LPAR    &kp LEFT    &kp UP      &kp RIGHT   &kp COLON   XXXXXXXX
+    XXXXXXXX    Z_SFT       XXXXXXXX    XXXXXXXX    &kp RBKT    &kp GT                              &kp RPAR    &kp EQUAL   &kp DOWN    &kp MINUS   BSL_SFT     XXXXXXXX
                                                     ESC_WIN     DEL_CTL     ENT_RED     ________    BSP_ALT     &kp GRAVE
             >; 
         };
