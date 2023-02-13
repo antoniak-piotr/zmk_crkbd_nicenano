@@ -15,9 +15,12 @@
 #define ESC_WIN &mt LWIN ESC
 #define DEL_CTL &mt LCTRL DEL
 #define ENT_RED &lt RED ENTER
+#define BSP_RED &lt RED BSPC
 
 #define SPC_BLU &lt BLUE SPACE
 #define BSP_ALT &mt LALT BSPC
+#define ENT_ALT &mt LALT ENTER
+
 #define SLS_SFT &mt RSHFT FSLH
 #define BSL_SFT &mt RSHFT BSLH
 #define SQT_ALT &mt RALT SQT
@@ -42,7 +45,8 @@
     XXXXXXXX    &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       XXXXXXXX
     XXXXXXXX    &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &kp SEMI    XXXXXXXX
     XXXXXXXX    Z_SFT       &kp X       &kp C       &kp V       &kp B                               &kp N       &kp M       &kp COMMA   &kp DOT     SLS_SFT     XXXXXXXX
-                                                    ESC_WIN     DEL_CTL     ENT_RED     SPC_BLU     BSP_ALT     SQT_ALT
+                                                    ESC_WIN     DEL_CTL     BSP_RED     SPC_BLU     ENT_ALT     SQT_ALT
+    //                                                ESC_WIN     DEL_CTL     ENT_RED     SPC_BLU     BSP_ALT     SQT_ALT
                 >; 
             };
 
@@ -51,7 +55,8 @@
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
     XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    &kp LBKT    &kp LT                              &kp LPAR    &kp LEFT    &kp UP      &kp RIGHT   &kp COLON   XXXXXXXX
     XXXXXXXX    Z_SFT       XXXXXXXX    XXXXXXXX    &kp RBKT    &kp GT                              &kp RPAR    &kp EQUAL   &kp DOWN    &kp MINUS   BSL_SFT     XXXXXXXX
-                                                    ESC_WIN     DEL_CTL     ENT_RED     ________    BSP_ALT     GRV_ALT
+                                                    ESC_WIN     DEL_CTL     BSP_RED     ________    ENT_ALT     GRV_ALT
+//                                                    ESC_WIN     DEL_CTL     ENT_RED     ________    BSP_ALT     GRV_ALT
             >; 
         };
 
