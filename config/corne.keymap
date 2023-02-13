@@ -20,7 +20,7 @@
 #define BSP_ALT &mt LALT BSPC
 #define SLS_SFT &mt RSHFT FSLH
 #define BSL_SFT &mt RSHFT BSLH
-#define SQR_ALT &mt RALT SQT
+#define SQT_ALT &mt RALT SQT
 #define GRV_ALT &mt RALT GRAVE
 
 #define BT_1 &bt BT_SEL 0
