@@ -15,7 +15,7 @@
 #define ESC_WIN &mt LWIN ESC
 #define DEL_CTL &mt LCTRL DEL
 #define ENT_RED &lt RED ENTER
-#define BSP_RED &lt RED BSP
+#define BSP_RED &lt RED BSPC
 #define DEL_RED &lt RED DEL
 
 #define SPC_BLU &lt BLUE SPACE
