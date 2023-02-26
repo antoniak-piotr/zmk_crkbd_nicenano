@@ -14,12 +14,20 @@
 #define Z_SFT &mt LSHFT Z
 #define ESC_WIN &mt LWIN ESC
 #define DEL_CTL &mt LCTRL DEL
+#define ESC_CTL &mt LCTRL ESC
 #define ENT_RED &lt RED ENTER
+#define BSP_RED &lt RED BSPC
+#define DEL_RED &lt RED DEL
 
 #define SPC_BLU &lt BLUE SPACE
+#define BSP_BLU &lt BLUE BSPC
 #define BSP_ALT &mt LALT BSPC
+#define ENT_ALT &mt LALT ENTER
+
 #define SLS_SFT &mt RSHFT FSLH
 #define BSL_SFT &mt RSHFT BSLH
+#define SQT_ALT &mt RALT SQT
+#define GRV_ALT &mt RALT GRAVE
 
 #define BT_1 &bt BT_SEL 0
 #define BT_2 &bt BT_SEL 1
@@ -40,16 +48,16 @@
     XXXXXXXX    &kp Q       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       XXXXXXXX
     XXXXXXXX    &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &kp SEMI    XXXXXXXX
     XXXXXXXX    Z_SFT       &kp X       &kp C       &kp V       &kp B                               &kp N       &kp M       &kp COMMA   &kp DOT     SLS_SFT     XXXXXXXX
-                                                    ESC_WIN     DEL_CTL     ENT_RED     SPC_BLU     BSP_ALT     &kp SQT
+                                                    &kp LWIN    ESC_CTL     BSP_RED     SPC_BLU     ENT_ALT     SQT_ALT
                 >; 
             };
 
         blue_layer {
             bindings = <   
-    XXXXXXXX    &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT                           &kp CARET   &kp AMPS    &kp ASTRK   &kp MINUS   &kp EQUAL   XXXXXXXX
-    XXXXXXXX    &kp TAB     &kp UNDER   &kp LBRC    &kp LBKT    &kp LT                              &kp LPAR    &kp LEFT    &kp UP      &kp RIGHT   &kp COLON   XXXXXXXX
-    XXXXXXXX    Z_SFT       &kp MINUS   &kp RBRC    &kp RBKT    &kp GT                              &kp RPAR    &kp EQUAL   &kp DOWN    &kp PLUS    BSL_SFT     XXXXXXXX
-                                                    ESC_WIN     DEL_CTL     ENT_RED     ________    BSP_ALT     &kp GRAVE
+    XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
+    XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    &kp LBKT    &kp LT                              &kp LPAR    &kp EQUAL   &kp UP      &kp MINUS   &kp COLON   XXXXXXXX
+    XXXXXXXX    &kp LSHFT   XXXXXXXX    XXXXXXXX    &kp RBKT    &kp GT                              &kp RPAR    &kp LEFT    &kp DOWN    &kp RIGHT   BSL_SFT     XXXXXXXX
+                                                    &kp LWIN    ESC_CTL     DEL_RED     ________    ENT_ALT     GRV_ALT
             >; 
         };
 
@@ -58,7 +66,7 @@
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
     XXXXXXXX    &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     XXXXXXXX
     XXXXXXXX    &kp LSHFT   BT_1        BT_2        BT_3        &kp F11                             &kp F12     XXXXXXXX    XXXXXXXX    &bt BT_CLR  &kp RSHFT   XXXXXXXX
-                                                    &kp LWIN    &kp LCTRL   ________    SPC_BLU     &kp LALT    XXXXXXXX
+                                                    &kp LWIN    ESC_CTL     ________    SPC_BLU     &kp LALT    XXXXXXXX
             >; 
         };
     };
