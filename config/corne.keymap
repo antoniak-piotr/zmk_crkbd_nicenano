@@ -25,7 +25,7 @@
 #define SQT_ALT &mt RALT SQT
 #define GRV_ALT &mt RALT GRAVE
 
-#define ESC_CFT &lt CFG ESC
+#define ESC_CFG &lt CFG ESC
 #define Q_CFG &lt CFG Q
 
 #define BT_1 &bt BT_SEL 0
