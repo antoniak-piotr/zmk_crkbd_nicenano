@@ -18,7 +18,7 @@
 #define ESC_WIN &mt LWIN ESC
 #define BSP_CTL &mt LCTRL BSPC
 //#define DEL_GRN &mt LCTRL &bspdel
-//#define SPC_GRN &lt GRN SPACE
+#define SPC_GRN &lt GRN SPACE
 #define SPC_RED &lt RED SPACE
 //#define BSP_GRN &lt GRN BSPC
 //#define DEL_GRN &lt GRN DEL
