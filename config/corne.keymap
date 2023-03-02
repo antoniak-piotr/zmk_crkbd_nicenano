@@ -33,7 +33,7 @@
 //#define BSP_CTL &mt LCTRL BSPC
 
 
-//#define DEL_GRN &mt LCTRL &bspdel
+//#define DEL_GRN &mt LCTRL &bsp_del
 #define SPC_GRN &lt GRN SPACE
 #define SPC_RED &lt RED SPACE
 //#define BSP_GRN &lt GRN BSPC
