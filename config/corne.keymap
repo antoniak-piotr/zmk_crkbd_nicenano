@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
+/*
 / {
     behaviors {
         bsp_del: backspace_delete {
@@ -20,6 +20,7 @@
         };
     };
 };
+*/
 
 #define GRN 1
 #define RED 2
@@ -27,15 +28,12 @@
 #define CFG 4
 
 #define Z_SFT &mt LSHFT Z
-//#define ESC_CTL &mt LCTRL ESC
 #define ESC_WIN &mt LWIN ESC
-#define BSP_CTL &mt LCTRL &bsp_del
-//#define BSP_CTL &mt LCTRL BSPC
-
+//#define BSP_CTL &mt LCTRL &bsp_del
+#define BSP_CTL &mt LCTRL BSPC
+#define DEL_CTL &mt LCTRL DEL
 #define SPC_GRN &lt GRN SPACE
 #define SPC_RED &lt RED SPACE
-//#define BSP_GRN &lt GRN BSPC
-//#define DEL_GRN &lt GRN DEL
 #define ENT_ALT &mt LALT ENTER
 #define ENT_SFT &mt RSHFT ENTER
 #define FSL_SFT &mt RSHFT FSLH
@@ -81,7 +79,7 @@
     &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp BSPC
     &kp TAB     &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp EQUAL   &kp LEFT    &kp UP      &kp RIGHT   &kp COLON   &kp GRAVE
     &kp LSHFT   &kp LSHFT   XXXXXXXX    &kp LBKT    &kp RBKT    XXXXXXXX                            &kp MINUS   &kp LPAR    &kp DOWN    &kp RPAR    BSL_SFT     ENT_SFT
-                                                    ESC_WIN     BSP_CTL     SPC_RED     ________    ENT_ALT     GRV_ALT
+                                                    ESC_WIN     DEL_CTL     SPC_RED     ________    ENT_ALT     GRV_ALT
             >;
         };
 
