@@ -8,6 +8,19 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+/ {
+    behaviors {
+        bsp_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DELETE";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+    };
+};
+
 #define GRN 1
 #define RED 2
 #define ORG 3
@@ -16,7 +29,10 @@
 #define Z_SFT &mt LSHFT Z
 //#define ESC_CTL &mt LCTRL ESC
 #define ESC_WIN &mt LWIN ESC
-#define BSP_CTL &mt LCTRL BSPC
+#define BSP_CTL &mt LCTRL &bspdel
+//#define BSP_CTL &mt LCTRL BSPC
+
+
 //#define DEL_GRN &mt LCTRL &bspdel
 #define SPC_GRN &lt GRN SPACE
 #define SPC_RED &lt RED SPACE
