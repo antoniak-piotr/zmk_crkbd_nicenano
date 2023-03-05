@@ -21,7 +21,7 @@
 #define X_CTL &mt LCTRL X
 #define V_ALT &mt LALT V
 #define M_ALT &mt LALT M
-#define DOT_CTL &mt RCRL DOT
+#define DOT_CTL &mt RCTRL DOT
 #define ENT_SFT &mt RSHFT ENTER
 #define ENT_ALT &mt LALT ENTER
 #define FSL_SFT &mt RSHFT FSLH
