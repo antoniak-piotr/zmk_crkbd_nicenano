@@ -87,7 +87,7 @@
             bindings = <
     &kp ESC     &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT                           &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR    &kp RPAR    &kp BSPC
     &kp TAB     &caps_word  XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp PLUS    &kp HOME    &kp PG_UP   &kp END     XXXXXXXX    XXXXXXXX
-    &kp LSHFT   XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp UNDER   &kp LBKT    &kp PG_DN   &kp RBKT    XXXXXXXX    ENT_SFT
+    &kp LSHFT   &kp LSHFT   XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp UNDER   &kp LBKT    &kp PG_DN   &kp RBKT    XXXXXXXX    ENT_SFT
                                                     XXXXXXXX    XXXXXXXX    ________    ________    ENT_ALT     XXXXXXXX
             >;
         };
