@@ -33,6 +33,7 @@
 // Layers
 #define SPC_GRN &lt GRN SPACE
 #define BSP_RED &lt RED BSPC
+#define BSP_GRN &lt GRN BSPC
 #define DEL_RED &lt RED DEL
 #define ESC_CFG &lt CFG ESC
 #define Q_CFG &lt CFG Q
@@ -79,7 +80,7 @@
     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    &kp PSCRN   XXXXXXXX
     XXXXXXXX    &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     XXXXXXXX
     &kp LSHFT   &kp LSHFT   &kp LCTRL   XXXXXXXX    &kp LALT    &kp F11                             &kp F12     &kp LALT    XXXXXXXX    &kp LCTRL   &kp RSHFT   ENT_SFT
-                                                    &kp LWIN    &kp LCTRL   ________    &mo GRN     ENT_ALT     XXXXXXXX
+                                                    &kp LWIN    &kp LCTRL   ________    BSP_GRN     ENT_ALT     XXXXXXXX
             >;
         };
 
