@@ -38,6 +38,7 @@
 #define Z_SFT &mt LSHFT Z
 #define V_ALT &mt LALT V
 #define ESC_CTL &mt LCTRL ESC
+#define BSP_ALT &mt LALT BSPC
 #define DEL_ALT &mt LALT DEL
 #define M_CTL &mt LALT M
 #define FSL_SFT &mt RSHFT FSLH
@@ -76,14 +77,14 @@
     XXXXXXXX    Q_CFG       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       XXXXXXXX
     XXXXXXXX    &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &kp SEMI    XXXXXXXX
     XXXXXXXX    Z_SFT       &kp X       &kp C       V_ALT       &kp B                               &kp N       M_CTL       &kp COMMA   &kp DOT     FSL_SFT     XXXXXXXX
-                                                    GRV_WIN     ESC_CTL     ENT_RED     SPC_GRN     DEL_ALT     SQT_ALT
+                                                    GRV_WIN     ESC_CTL     ENT_RED     SPC_GRN     BSP_ALT     SQT_ALT
             >;
         };
 
         green_layer {
             bindings = <
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
-    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp EQUAL   &kp LEFT    &kp UP      &kp RIGHT   &kp COLON   XXXXXXXX
+    XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp EQUAL   &kp LEFT    &kp UP      &kp RIGHT   &kp COLON   XXXXXXXX
     XXXXXXXX    &kp LSHFT   XXXXXXXX    XXXXXXXX    &kp LALT    XXXXXXXX                            &kp UNDER   &kp LCTRL   &kp DOWN    XXXXXXXX    BSL_SFT     XXXXXXXX
                                                     TLD_WIN     ESC_CTL     ENT_RED     ________    DEL_ALT     &kp DQT
             >;
@@ -103,7 +104,7 @@
     XXXXXXXX    &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT                           &kp CARET   &kp AMPS    &kp ASTRK   XXXXXXXX    XXXXXXXX    XXXXXXXX
     XXXXXXXX    &caps_word  XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp PLUS    &kp HOME    &kp PG_UP   &kp END     XXXXXXXX    XXXXXXXX
     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp MINUS   XXXXXXXX    &kp PG_DN   XXXXXXXX    XXXXXXXX    XXXXXXXX
-                                                    XXXXXXXX    XXXXXXXX    ________    ________    XXXXXXXX    XXXXXXXX
+                                                    XXXXXXXX    XXXXXXXX    ________    ________    &kp DEL     XXXXXXXX
             >;
         };
 
