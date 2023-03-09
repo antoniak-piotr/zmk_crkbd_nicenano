@@ -84,7 +84,7 @@
             bindings = <
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp EQUAL   &kp LEFT    &kp UP      &kp RIGHT   &kp COLON   XXXXXXXX
-    XXXXXXXX    &kp LSHFT   XXXXXXXX    XXXXXXXX    &kp LALT    XXXXXXXX                            &kp MINUS   &kp LCTRL   &kp DOWN    XXXXXXXX    BSL_SFT     XXXXXXXX
+    XXXXXXXX    &kp LSHFT   XXXXXXXX    XXXXXXXX    &kp LALT    XXXXXXXX                            &kp UNDER   &kp LCTRL   &kp DOWN    XXXXXXXX    BSL_SFT     XXXXXXXX
                                                     TLD_WIN     ESC_CTL     ENT_RED     ________    DEL_ALT     &kp DQT
             >;
         };
@@ -102,7 +102,7 @@
             bindings = <
     XXXXXXXX    &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT                           &kp CARET   &kp AMPS    &kp ASTRK   XXXXXXXX    XXXXXXXX    XXXXXXXX
     XXXXXXXX    &caps_word  XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp PLUS    &kp HOME    &kp PG_UP   &kp END     XXXXXXXX    XXXXXXXX
-    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp UNDER   XXXXXXXX    &kp PG_DN   XXXXXXXX    XXXXXXXX    XXXXXXXX
+    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp MINUS   XXXXXXXX    &kp PG_DN   XXXXXXXX    XXXXXXXX    XXXXXXXX
                                                     XXXXXXXX    XXXXXXXX    ________    ________    XXXXXXXX    XXXXXXXX
             >;
         };
