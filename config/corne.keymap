@@ -40,7 +40,7 @@
 #define ESC_CTL &mt LCTRL ESC
 #define BSP_ALT &mt LALT BSPC
 #define DEL_ALT &mt LALT DEL
-#define M_CTL &mt LALT M
+#define M_CTL &mt LCTRL M
 #define FSL_SFT &mt RSHFT FSLH
 #define BSL_SFT &mt RSHFT BSLH
 #define SQT_ALT &mt RALT SQT
