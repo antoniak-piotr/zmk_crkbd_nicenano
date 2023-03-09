@@ -40,5 +40,17 @@ COMBO(lcleft,     &kp LC(LEFT),     19 20, GRN, 40)
 COMBO(lcright,    &kp LC(RIGHT),    20 21, GRN, 40)
 COMBO(lchome,     &kp LC(HOME),     19 20, GRN, 40)
 COMBO(lcend,      &kp LC(END),      20 21, GRN, 40)
+
+// Numbers
+COMBO(n1,         &kp N1,            1 13, DEF GRN RED, 40)
+COMBO(n2,         &kp N2,            2 14, DEF GRN RED, 40)
+COMBO(n3,         &kp N3,            3 15, DEF GRN RED, 40)
+COMBO(n4,         &kp N4,            4 16, DEF GRN RED, 40)
+COMBO(n5,         &kp N5,            5 17, DEF GRN RED, 40)
+COMBO(n6,         &kp N6,            6 18, DEF GRN RED, 40)
+COMBO(n7,         &kp N7,            7 19, DEF GRN RED, 40)
+COMBO(n8,         &kp N8,            8 20, DEF GRN RED, 40)
+COMBO(n9,         &kp N9,            8 21, DEF GRN RED, 40)
+COMBO(n0,         &kp N0,           10 22, DEF GRN RED, 40)
     };
 };
