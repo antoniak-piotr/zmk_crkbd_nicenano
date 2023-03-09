@@ -46,11 +46,5 @@ COMBO(tab,        &kp TAB,          14 16, DEF GRN RED, 40)
 COMBO(del,        &kp DEL,           9 19, DEF GRN RED, 40)
 COMBO(bspc,       &kp BSPC,         19 21, DEF GRN RED, 40)
 COMBO(cwrd,       &caps_word,       25 34, DEF GRN RED, 60)
-
-// Navigation
-COMBO(lcleft,     &kp LC(LEFT),     19 20, GRN, 40)
-COMBO(lcright,    &kp LC(RIGHT),    20 21, GRN, 40)
-COMBO(lchome,     &kp LC(HOME),     19 20, GRN, 40)
-COMBO(lcend,      &kp LC(END),      20 21, GRN, 40)
     };
 };
