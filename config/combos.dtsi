@@ -41,10 +41,8 @@ COMBO(lt,         &kp LT,           17 29, DEF GRN RED, 40)
 COMBO(gt,         &kp GT,           18 30, DEF GRN RED, 40)
 
 // Control & Whitespace
-// COMBO(esc,        &kp ESC,           2 16, DEF GRN RED, 40)
-COMBO(tab,        &kp TAB,          14 16, DEF GRN RED, 40)
-// COMBO(del,        &kp DEL,           9 19, DEF GRN RED, 40)
-COMBO(bspc,       &kp BSPC,         19 21, DEF GRN RED, 40)
+COMBO(tab,        &kp TAB,          15 16, DEF GRN RED, 40)
+COMBO(bspc,       &kp BSPC,         19 20, DEF GRN RED, 40)
 COMBO(cwrd,       &caps_word,       25 34, DEF GRN RED, 60)
 COMBO(cwrd1,      &caps_word,       16 19, DEF GRN RED, 50)
     };
