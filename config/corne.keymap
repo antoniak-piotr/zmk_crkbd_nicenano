@@ -34,12 +34,6 @@
     continue-list = <UNDERSCORE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 BSPC DEL>;
 };
 
-ZMK_MACRO(end_enter,
-    wait-ms = <30>;
-    tap-ms = <40>;
-    bindings = <&kp END &kp ENTER>;
-)
-
 #define ________ &trans
 #define XXXXXXXX &none
 
@@ -86,6 +80,16 @@ ZMK_MACRO(end_enter,
 };
 
 / {
+    macros {
+        ZMK_MACRO(end_ent,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp END &kp ENTER>;
+        )
+    };
+};
+
+/ {
 //  #           #           #           #           #           #           #           #           #           #           #           #           #           #
     keymap {
         compatible = "zmk,keymap";
@@ -103,7 +107,7 @@ ZMK_MACRO(end_enter,
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
     XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp MINUS   &kp EQUAL   &kp LPAR    &kp RPAR    &kp COLON   XXXXXXXX
     XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    XXXXXXXX    XXXXXXXX                            &kp GRAVE   &kp SQT     LBKT_ALT    &kp RBKT    BSL_SFT     XXXXXXXX
-                                                    XXXXXXXX    ESC_WIN     &end_enter  ________    &kp DEL     XXXXXXXX
+                                                    XXXXXXXX    ESC_WIN     &end_ent    ________    &kp DEL     XXXXXXXX
             >;
         };
 
