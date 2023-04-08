@@ -111,7 +111,7 @@
             bindings = <
     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX
     XXXXXXXX    &caps_word  XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    &kp LEFT    &kp UP      &kp RIGHT   XXXXXXXX    XXXXXXXX
-    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    &kp HOME    &kp DOWN    &kp END     XXXXXXXX    XXXXXXXX
+    XXXXXXXX    &kp LSHFT   &kp LWIN    &kp LALT    &kp LCTL    XXXXXXXX                            XXXXXXXX    &kp HOME    &kp DOWN    &kp END     XXXXXXXX    XXXXXXXX
                                                     XXXXXXXX    ________    ENT_RED     ________    ________    XXXXXXXX
             >;
         };
