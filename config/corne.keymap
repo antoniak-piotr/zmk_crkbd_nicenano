@@ -59,10 +59,7 @@
 #define ESC_RED &lt RED ESC
 #define ENT_RED &lt RED ENTER
 #define SPC_GRN &lt GRN SPACE
-//#define BSP_GRN &lt GRN BSPC
 #define UND_GRN &lt GRN UNDER
-//#define DEL_GRN &lt GRN DEL
-//#define ENT_RED &lt RED ENTER
 
 // Bluetooth
 #define BT_1 &bt BT_SEL 0
@@ -98,7 +95,7 @@
     XXXXXXXX    Q_CFG       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       XXXXXXXX
     XXXXXXXX    &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &kp SEMI    XXXXXXXX
     XXXXXXXX    Z_SFT       &kp X       C_ALT       V_CTL       &kp B                               &kp N       M_CTL       COM_ALT     &kp DOT     FSL_SFT     XXXXXXXX
-                                                    XXXXXXXX    ESC_WIN     ENT_RED     SPC_GRN     BSP_ALT     XXXXXXXX
+                                                    ESC_WIN     ENT_RED     XXXXXXXX    XXXXXXXX    SPC_GRN     BSP_ALT
             >;
         };
 
@@ -107,7 +104,7 @@
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
     XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp MINUS   &kp EQUAL   &kp LPAR    &kp RPAR    &kp COLON   XXXXXXXX
     XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    XXXXXXXX    XXXXXXXX                            &kp GRAVE   &kp SQT     LBKT_ALT    &kp RBKT    BSL_SFT     XXXXXXXX
-                                                    XXXXXXXX    ESC_WIN     &end_ent    ________    &kp DEL     XXXXXXXX
+                                                    ESC_WIN     &end_ent    XXXXXXXX    XXXXXXXX    ________    &kp DEL
             >;
         };
 
@@ -116,7 +113,7 @@
     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    &kp PSCRN   XXXXXXXX
     XXXXXXXX    &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     XXXXXXXX
     XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    &kp LCTL    &kp F11                             &kp F12     &kp LCTRL   &kp LALT    XXXXXXXX    &kp RSHFT   XXXXXXXX
-                                                    XXXXXXXX    ESC_WIN     ________    UND_GRN     XXXXXXXX    XXXXXXXX
+                                                    ESC_WIN     ________    XXXXXXXX    XXXXXXXX    UND_GRN     XXXXXXXX
             >;
         };
 
@@ -125,7 +122,7 @@
     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX
     XXXXXXXX    &caps_word  XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    &kp LEFT    &kp UP      &kp RIGHT   XXXXXXXX    XXXXXXXX
     XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    &kp LCTL    XXXXXXXX                            XXXXXXXX    &kp HOME    &kp DOWN    &kp END     XXXXXXXX    XXXXXXXX
-                                                    XXXXXXXX    ESC_WIN     ________    ________    XXXXXXXX    XXXXXXXX
+                                                    ESC_WIN     ________    XXXXXXXX    XXXXXXXX    ________    XXXXXXXX
             >;
         };
 
