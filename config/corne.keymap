@@ -31,7 +31,7 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
+    continue-list = <UNDERSCORE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 BSPC DEL>;
 };
 
 #define ________ &trans
@@ -39,25 +39,27 @@
 
 // Modifiers
 #define Z_SFT &mt LSHFT Z
-#define V_ALT &mt LALT V
-#define ESC_CTL &mt LCTRL ESC
-#define ENT_ALT &mt LALT ENTER
-//#define BSP_ALT &mt LALT BSPC
-//#define DEL_ALT &mt LALT DEL
-#define M_CTL &mt LCTRL M
+#define X_WIN &mt LWIN X
+#define C_ALT &mt LALT C
+#define V_CTL &mt LCTL V
+
+#define M_CTL &mt LCTL M
+#define COM_ALT &mt LALT COMMA
+#define DOT_WIN &mt LWIN DOT
 #define FSL_SFT &mt RSHFT FSLH
+
+#define LBKT_ALT &mt LALT LBKT
 #define BSL_SFT &mt RSHFT BSLH
-#define SQT_ALT &mt RALT SQT
-#define DQT_ALT &mt RALT DQT
-#define GRV_WIN &mt LWIN GRAVE
-#define TLD_WIN &mt LWIN TILDE
 
 // Layers
-#define SPC_GRN &lt GRN SPACE
-#define BSP_RED &lt RED BSPC
-#define DEL_RED &lt RED DEL
-//#define ENT_RED &lt RED ENTER
 #define Q_CFG &lt CFG Q
+#define ESC_RED &lt RED ESC
+#define ENT_RED &lt RED ENTER
+#define SPC_GRN &lt GRN SPACE
+#define BSP_GRN &lt GRN BSPC
+#define UND_GRN &lt GRN UNDER
+#define DEL_GRN &lt GRN DEL
+//#define ENT_RED &lt RED ENTER
 
 // Bluetooth
 #define BT_1 &bt BT_SEL 0
@@ -82,17 +84,17 @@
             bindings = <
     XXXXXXXX    Q_CFG       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       XXXXXXXX
     XXXXXXXX    &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &kp SEMI    XXXXXXXX
-    XXXXXXXX    Z_SFT       &kp X       &kp C       V_ALT       &kp B                               &kp N       M_CTL       &kp COMMA   &kp DOT     FSL_SFT     XXXXXXXX
-                                                    GRV_WIN     ESC_CTL     BSP_RED     SPC_GRN     ENT_ALT     SQT_ALT
+    XXXXXXXX    Z_SFT       X_WIN       C_ALT       V_CTL       &kp B                               &kp N       M_CTL       COM_ALT     DOT_WIN     FSL_SFT     XXXXXXXX
+                                                    XXXXXXXX    ESC_RED     ENT_RED     SPC_GRN     BSP_GRN     XXXXXXXX
             >;
         };
 
         green_layer {
             bindings = <
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
-    XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    &kp PLUS                            &kp EQUAL   &kp LEFT    &kp UP      &kp RIGHT   &kp COLON   XXXXXXXX
-    XXXXXXXX    &kp LSHFT   XXXXXXXX    XXXXXXXX    &kp LALT    &kp UNDER                           &kp MINUS   &kp LCTRL   &kp DOWN    XXXXXXXX    BSL_SFT     XXXXXXXX
-                                                    TLD_WIN     ESC_CTL     DEL_RED     ________    ENT_ALT     &kp DQT
+    XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp MINUS   &kp EQUAL   &kp LPAR    &kp RPAR    &kp COLON   XXXXXXXX
+    XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    XXXXXXXX    XXXXXXXX                            &kp GRAVE   &kp SQT     LBKT_ALT    &kp RBKT    BSL_SFT     XXXXXXXX
+                                                    XXXXXXXX    ESC_RED     ENT_RED     ________    ________    XXXXXXXX
             >;
         };
 
@@ -100,17 +102,17 @@
             bindings = <
     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    &kp PSCRN   XXXXXXXX
     XXXXXXXX    &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     XXXXXXXX
-    XXXXXXXX    &kp LSHFT   XXXXXXXX    XXXXXXXX    &kp LALT    &kp F11                             &kp F12     &kp LCTRL   XXXXXXXX    XXXXXXXX    &kp RSHFT   XXXXXXXX
-                                                    TLD_WIN     ESC_CTL     ________    SPC_GRN     ENT_ALT     &kp DQT
+    XXXXXXXX    &kp LSHFT   &kp LWIN    &kp LALT    &kp LCTL    &kp F11                             &kp F12     &kp LCTRL   XXXXXXXX    XXXXXXXX    &kp RSHFT   XXXXXXXX
+                                                    XXXXXXXX    ________    ENT_RED     UND_GRN     DEL_GRN     XXXXXXXX
             >;
         };
 
         orange_layer {
             bindings = <
-    XXXXXXXX    &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT                           &kp CARET   &kp AMPS    &kp ASTRK   XXXXXXXX    XXXXXXXX    XXXXXXXX
-    XXXXXXXX    &caps_word  XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp PLUS    &kp HOME    &kp PG_UP   &kp END     XXXXXXXX    XXXXXXXX
-    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp UNDER   XXXXXXXX    &kp PG_DN   XXXXXXXX    XXXXXXXX    XXXXXXXX
-                                                    XXXXXXXX    XXXXXXXX    ________    ________    &kp DEL     XXXXXXXX
+    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX
+    XXXXXXXX    &caps_word  XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    &kp LEFT    &kp UP      &kp RIGHT   XXXXXXXX    XXXXXXXX
+    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    &kp HOME    &kp DOWN    &kp END     XXXXXXXX    XXXXXXXX
+                                                    XXXXXXXX    ________    ENT_RED     ________    ________    XXXXXXXX
             >;
         };
 
