@@ -129,7 +129,7 @@
     XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
     XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp MINUS   &kp EQUAL   &kp LPAR    &kp RPAR    &kp COLON   XXXXXXXX
     XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    XXXXXXXX    XXXXXXXX                            &kp GRAVE   &kp SQT     LBKT_ALT    &kp RBKT    BSL_SFT     XXXXXXXX
-                                                    ESC_WIN     &end_ent    XXXXXXXX    XXXXXXXX    ________    &kp DEL
+                                                    ESC_WIN     ENT_RED    XXXXXXXX    XXXXXXXX    ________    &kp DEL
             >;
         };
 
