@@ -14,58 +14,6 @@
 #define ORG 3
 #define CFG 4
 
-#include "combos.dtsi"
-
-&mt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
-    global-quick-tap;
-};
-
-&lt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
-    global-quick-tap;
-};
-
-&caps_word {
-    continue-list = <UNDERSCORE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 BSPC DEL>;
-};
-
-#define ________ &trans
-#define XXXXXXXX &none
-
-// Modifiers
-#define Z_SFT &mt LSHFT Z
-#define X_WIN &mt LWIN X
-#define C_ALT &mt LALT C
-#define V_CTL &mt LCTL V
-
-#define M_CTL &mt LCTL M
-#define COM_ALT &mt LALT COMMA
-#define DOT_WIN &mt LWIN DOT
-#define FSL_SFT &mt RSHFT FSLH
-
-#define LBKT_ALT &mt LALT LBKT
-#define BSL_SFT &mt RSHFT BSLH
-
-#define ESC_WIN &mt LWIN ESC
-#define BSP_ALT &mt RALT BSPC
-
-// Layers
-#define Q_CFG &lt CFG Q
-#define ESC_RED &lt RED ESC
-#define ENT_RED &lt RED ENTER
-#define SPC_GRN &lt GRN SPACE
-#define UND_GRN &lt GRN UNDER
-
-// Bluetooth
-#define BT_1 &bt BT_SEL 0
-#define BT_2 &bt BT_SEL 1
-#define BT_3 &bt BT_SEL 2
-
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -85,6 +33,83 @@
         )
     };
 };
+
+/ {
+    behaviors {
+        bspdel: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DELETE";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            //keep-mods = <(MOD_RSFT)>;
+        };
+        
+        bdm: backspace_delete_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BACKSPACE_DELETE_ALT";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&bspdel>;
+        };
+    };
+};
+
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+};
+
+&lt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <125>;
+    global-quick-tap;
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 BSPC DEL>;
+};
+
+#include "combos.dtsi"
+
+#define ________ &trans
+#define XXXXXXXX &none
+
+// Modifiers
+#define Z_SFT &mt LSHFT Z
+#define X_WIN &mt LWIN X
+#define C_ALT &mt LALT C
+#define V_CTL &mt LCTL V
+
+#define M_CTL &mt LCTL M
+#define COM_ALT &mt LALT COMMA
+#define DOT_WIN &mt LWIN DOT
+#define FSL_SFT &mt RSHFT FSLH
+
+#define LBKT_ALT &mt LALT LBKT
+#define BSL_SFT &mt RSHFT BSLH
+
+#define ESC_WIN &mt LWIN ESC
+//#define BSP_ALT &mt RALT BSPC
+#define BSP_ALT &bdm RALT 0
+
+// Layers
+#define Q_CFG &lt CFG Q
+#define ESC_RED &lt RED ESC
+#define ENT_RED &lt RED ENTER
+#define SPC_GRN &lt GRN SPACE
+#define UND_GRN &lt GRN UNDER
+
+// Bluetooth
+#define BT_1 &bt BT_SEL 0
+#define BT_2 &bt BT_SEL 1
+#define BT_3 &bt BT_SEL 2
 
 / {
 //  #           #           #           #           #           #           #           #           #           #           #           #           #           #
@@ -121,7 +146,7 @@
             bindings = <
     XXXXXXXX    &kp ESC     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    &kp BSPC    XXXXXXXX
     XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    &kp LEFT    &kp UP      &kp RIGHT   &kp ENTER   XXXXXXXX
-    XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    &kp LCTL    XXXXXXXX                            XXXXXXXX    &kp HOME    &kp DOWN    &kp END     XXXXXXXX    XXXXXXXX
+    XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    &kp LCTL    XXXXXXXX                            XXXXXXXX    &kp HOME    &kp DOWN    &kp END     &kp RSHFT   XXXXXXXX
                                                     ESC_WIN     ________    XXXXXXXX    XXXXXXXX    ________    XXXXXXXX
             >;
         };
