@@ -144,7 +144,7 @@
 
         orange_layer {
             bindings = <
-    XXXXXXXX    &kp ESC     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    &kp BSPC    XXXXXXXX
+    XXXXXXXX    &kp ESC     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    &bspdel     XXXXXXXX
     XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    &kp LEFT    &kp UP      &kp RIGHT   &kp ENTER   XXXXXXXX
     XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    &kp LCTL    XXXXXXXX                            XXXXXXXX    &kp HOME    &kp DOWN    &kp END     &kp RSHFT   XXXXXXXX
                                                     ESC_WIN     ________    XXXXXXXX    XXXXXXXX    ________    XXXXXXXX
