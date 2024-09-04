@@ -1,0 +1,309 @@
+draw_config:
+  # key_h: 60
+  combo_w: 21
+  combo_h: 15
+  small_pad: 8
+  shrink_wide_legends: 5
+
+  # glyph_tap_size: 16
+  # glyph_hold_size: 8
+  # glyph_shifted_size: 7
+
+  arc_radius: 0
+  # separate_combo_diagrams: bool = True
+  # draw_key_sides: True
+
+  append_colon_to_layer_header: False
+
+  svg_extra_style: |
+    .none, .trans, .ghost {
+      opacity: 0.8;
+    }
+
+    /* color accent for combo boxes */
+    rect.combo, rect.combo-separate {
+        fill: #CCDDFF;
+        stroke: #99AACC;
+    }
+
+    /* rect.held, rect.combo.held { */
+    .held {
+      opacity: 1.0;
+      filter: drop-shadow(0px 0px 6px #4FC0D0);  /* #7979EC); */
+    }
+
+    text.key.tap {
+      font-size: 16px;
+      /* font-weight: 900; */
+    }
+
+    text.hold, text.shifted {
+      /* font-size: 9px; */
+      font-weight: normal;
+    }
+
+    text.combo {
+      /* font-size: 11px; */
+      /* font-weight: bold;j */
+    }
+
+parse_config:
+  # mark_alternate_layer_activators: true
+  # sticky_label: $$mdi:gesture-tap-hold$$
+  trans_legend:
+    tap: ""
+
+  raw_binding_map:
+    # NUMERIC
+    "&kp N1":
+      tap: "1!"
+    "&kp N2":
+      tap: "2@"
+    "&kp N3":
+      tap: "3#"
+    "&kp N4":
+      tap: "4$"
+    "&kp N5":
+      tap: "5%"
+    "&kp N6":
+      tap: "6^"
+    "&kp N7":
+      tap: "7&"
+    "&kp N8":
+      tap: "8*"
+    "&kp N9":
+      tap: "9("
+    "&kp N0":
+      tap: "0)"
+
+    # SHIFTED KEYS
+    "&kp COMMA":
+      tap: ",<"
+    "&kp DOT":
+      tap: ".>"
+    "&kp SLASH":
+      tap: "/?"
+    "&kp BSLH":
+      tap: "\\|"
+    "&kp LBKT":
+      tap: "[{"
+    "&kp RBKT":
+      tap: "]}"
+    "&kp GRAVE":
+      tap: "`~"
+    "&kp APOS":
+      tap: "'\""
+    "&kp SEMI":
+      tap: ";:"
+
+    # BSPC, DEL, BSDL, CUT, COPY, PASTE
+    "&bsdl":
+      tap: BSDL
+      # hold: $$mdi:content-cut$$
+
+    "&kp LC(X)":
+      tap: CUT
+      hold: $$mdi:content-cut$$
+    "&kp LC(C)":
+      tap: COPY
+      hold: $$mdi:content-copy$$
+    "&kp LC(V)":
+      tap: PASTE
+      hold: $$mdi:content-paste$$
+
+    # UNDO, REDO
+    "&kp LC(Z)":
+      tap: UNDO
+      hold: $$mdi:undo$$
+    "&kp LSC(Z)":
+      tap: REDO
+      hold: $$mdi:redo$$
+
+    # SNIP, PSCRN
+    "&kp LSG(S)":
+      tap: SNIP
+      hold: $$mdi:crop$$ # select-drag$$
+    "&kp PSCRN":
+      tap: PSCRN
+      hold: $$mdi:crop$$ # select$$
+
+    # PREV/NEXT IDENT (GExpert / CnWizards) + DECLARATION/IMPLEMENTATION JUMPS (Delphi IDE?)
+    "&kp LCA(UP)":
+      tap: <IDEN
+      hold: $$mdi:tag-outline$$
+      # hold: $$mdi:tag-arrow-up$$
+    "&kp LCA(DOWN)":
+      tap: IDEN>
+      hold: $$mdi:tag-outline$$
+      # hold: $$mdi:tag-arrow-down$$
+    "&kp LSC(UP)":
+      tap: BOUNC
+      # hold: $$mdi:swap-vertical$$
+
+    # PREV/NEXT/DROP BOOKMARKS (Parnassus)
+    "&kp LCA(LEFT)":
+      tap: "<BMK"
+      # hold: $$mdi:bookmark$$
+    "&kp LCA(RIGHT)":
+      tap: "BMK>"
+      # hold: $$mdi:bookmark$$
+    "&kp LC(B)":
+      tap: "BMK"
+      # hold: $$mdi:bookmark$$
+
+    # PREV/NEXT HISTORY + GOTO DEFINITION (Delphi IDE)
+    "&kp LA(LEFT)":
+      tap: <HIST
+      hold: $$mdi:step-backward-2$$
+    "&kp LA(RIGHT)":
+      tap: HIST>
+      hold: $$mdi:step-forward-2$$
+    "&kp LA(UP)":
+      tap: DECL
+      hold: $$mdi:pencil$$
+
+    # GREP (GExperts), FIND (Delph IDE), GOTO (Parnassus)
+    "&kp LS(LA(S))":
+      tap: GREP
+    "&kp LC(F)":
+      tap: FIND
+    "&kp LC(G)":
+      tap: GOTO
+
+    # MAGNIFIER
+    "&kp LG(EQUAL)":
+      tap: ZOOM+
+      hold: $$mdi:magnify$$ # $$mdi:magnify-plus-outline$$
+    "&kp LG(MINUS)":
+      tap: ZOOM-
+      hold: $$mdi:magnify$$ # $$mdi:magnify-minus-outline$$
+    "&kp LG(ESC)":
+      tap: EXIT
+      # hold: $$mdi:magnify$$ # $$mdi:magnify-minus-outline$$
+
+    # CAPSLOCK, CAPSWORD
+    "&kp CLCK":
+      tap: CLCK # $$mdi:caps-lock$$ # CAPS # hold: $$mdi:close-box$$
+    "&caps_word":
+      tap: CWRD # $$mdi:caps-lock$$ # CAPS # hold: $$mdi:close-box$$
+
+    # systemowe (Bluetooth, przełącznik BLE-USB i QWERTY-COLEMAK)
+    "&out OUT_TOG":
+      tap: "BT/USB"
+      hold: $$mdi:toggle-switch-outline$$ # $$mdi:keyboard-settings-outline$$
+    "&tog COL":
+      tap: COLEMAK
+      hold: $$mdi:toggle-switch-outline$$ # $$mdi:keyboard-settings-outline$$
+
+    "&sys_reset":
+      tap: RESET
+      hold: $$mdi:power$$
+    "&bootloader":
+      tap: BOOT
+      hold: $$mdi:cloud-download-outline$$
+
+    "&bt BT_CLR":
+      tap: "BT" # $$mdi:bluetooth$$
+      hold: "CLR" # $$mdi:close-box$$
+
+    # nawigacja
+    "&kp LEFT":
+      tap: LEFT
+      hold: $$mdi:chevron-left$$
+    "&kp RIGHT":
+      tap: RIGHT
+      hold: $$mdi:chevron-right$$
+    "&kp UP":
+      tap: UP
+      hold: $$mdi:chevron-up$$
+    "&kp DOWN":
+      tap: DOWN
+      hold: $$mdi:chevron-down$$
+
+    "&kp HOME":
+      tap: HOME
+      # hold: $$mdi:page-first$$
+    "&kp END":
+      tap: END
+      # hold: $$mdi:page-last$$
+
+    "&kp PG_UP":
+      tap: PGUP
+      hold: $$mdi:chevron-triple-up$$
+    "&kp PG_DN":
+      tap: PGDN
+      hold: $$mdi:chevron-triple-down$$
+
+    "&kp LC(LEFT)":
+      tap: "<WORD"
+      hold: $$mdi:chevron-double-left$$
+    "&kp LC(RIGHT)":
+      tap: "WORD>"
+      hold: $$mdi:chevron-double-right$$
+
+    # COMMENT
+    "&kp LC(SLASH)":
+      tap: "//" # CMNT
+      # hold: //
+
+    # DELPHI MACROS
+    "&dm(T)":   # CODE BLOCK FOLD TOGGLE
+      tap: TGGL
+      hold: $$mdi:unfold-more-vertical$$
+
+    # # wirtualne pulpity + przechodzenie pomiędzy aplikacjami
+    # "&kp LA(TAB)":
+    #   tap: "PREV"
+    #   hold: $$mdi:page-previous-outline$$
+    # "&prev":
+    #   tap: "PREV"
+    #   hold: $$mdi:page-previous-outline$$
+    # "&next":
+    #   tap: "NEXT"
+    #   hold: $$mdi:page-next-outline$$
+
+    # "&dlequal":
+    #   tap: "≤"
+
+    # "&dequal":
+    #   tap: ":="
+
+    # "&dgequal":
+    #   tap: "≥"
+
+    "&none":
+      type: none
+
+  zmk_combos:
+    clck:
+      width: 41
+    cwrd:
+      width: 41
+
+    tab:
+      width: 31
+    bsdl:
+      width: 31
+
+    exit:
+      align: top
+      offset: 0.15
+      width: 35
+
+    menter:
+      width: 41
+
+    home:
+      width: 31
+    end:
+      width: 31
+
+    bmrk1:
+      width: 31
+    bmrk2:
+      width: 31
+    bmrk3:
+      width: 31
+
+    bounce:
+      width: 31

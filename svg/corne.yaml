@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   default:
-  - ''
+  - {type: none}
   - {t: Q, h: config}
   - W
   - E
@@ -12,8 +12,8 @@ layers:
   - I
   - O
   - P
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
   - A
   - S
   - D
@@ -23,9 +23,9 @@ layers:
   - J
   - K
   - L
-  - ;
-  - ''
-  - ''
+  - ';:'
+  - {type: none}
+  - {type: none}
   - {t: Z, h: LSHFT}
   - X
   - {t: C, h: LALT}
@@ -33,73 +33,73 @@ layers:
   - B
   - N
   - {t: M, h: LCTL}
-  - {t: ',', h: LALT}
-  - .
+  - {t: ',<', h: LALT}
+  - .>
   - {t: /, h: RSHFT}
-  - ''
+  - {type: none}
   - {t: ESC, h: LWIN}
   - {t: ENTER, h: red}
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
   - {t: SPACE, h: green}
   - {t: BACKSPACE, h: RALT, s: DELETE}
   green:
-  - ''
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - ''
-  - ''
+  - {type: none}
+  - 1!
+  - 2@
+  - 3#
+  - 4$
+  - 5%
+  - 6^
+  - 7&
+  - 8*
+  - 9(
+  - 0)
+  - {type: none}
+  - {type: none}
   - TAB
-  - ''
-  - ''
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
   - '-'
   - '='
   - (
   - )
   - ':'
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
   - LSHFT
-  - ''
+  - {type: none}
   - LALT
-  - ''
-  - ''
-  - '`'
+  - {type: none}
+  - {type: none}
+  - '`~'
   - ''''
-  - {t: '[', h: LALT}
-  - ']'
-  - {t: \, h: RSHFT}
-  - ''
+  - {t: '[{', h: LALT}
+  - ']}'
+  - {t: \|, h: RSHFT}
+  - {type: none}
   - {t: ESC, h: LWIN}
   - {t: ENTER, h: red}
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
   - {type: held}
   - DEL
   red:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - PSCRN
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {t: PSCRN, h: '$$mdi:crop$$'}
+  - {type: none}
+  - {type: none}
   - F1
   - F2
   - F3
@@ -110,111 +110,111 @@ layers:
   - F8
   - F9
   - F10
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
   - LSHFT
-  - ''
+  - {type: none}
   - LALT
   - LCTL
   - F11
   - F12
   - LCTRL
   - LALT
-  - ''
+  - {type: none}
   - RSHFT
-  - ''
+  - {type: none}
   - {t: ESC, h: LWIN}
   - {type: held}
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
   - {t: _, h: green}
-  - ''
+  - {type: none}
   orange:
-  - ''
+  - {type: none}
   - ESC
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
   - {t: BACKSPACE, s: DELETE}
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
   - TAB
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - LEFT
-  - UP
-  - RIGHT
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {t: LEFT, h: '$$mdi:chevron-left$$'}
+  - {t: UP, h: '$$mdi:chevron-up$$'}
+  - {t: RIGHT, h: '$$mdi:chevron-right$$'}
   - ENTER
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
   - LSHFT
-  - ''
+  - {type: none}
   - LALT
   - LCTL
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
   - HOME
-  - DOWN
+  - {t: DOWN, h: '$$mdi:chevron-down$$'}
   - END
   - RSHFT
-  - ''
+  - {type: none}
   - {t: ESC, h: LWIN}
   - {type: held}
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
   - {type: held}
-  - ''
+  - {type: none}
   config:
-  - ''
+  - {type: none}
   - {type: held}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - BT CLR
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {t: BT, h: CLR}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
 combos:
 - p: [1, 13]
   k: '!'
@@ -253,10 +253,10 @@ combos:
   k: )
   l: [default, green, red]
 - p: [15, 27]
-  k: '['
+  k: '[{'
   l: [default, green, red]
 - p: [20, 32]
-  k: ']'
+  k: ']}'
   l: [default, green, red]
 - p: [14, 26]
   k: '{'
@@ -271,8 +271,8 @@ combos:
   k: {t: BACKSPACE, s: DELETE}
   l: [default, green, red]
 - p: [25, 34]
-  k: '&caps_word'
+  k: CWRD
   l: [default, green, red]
 - p: [16, 19]
-  k: '&caps_word'
+  k: CWRD
   l: [default, green, red]
