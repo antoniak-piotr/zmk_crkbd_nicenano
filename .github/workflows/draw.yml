@@ -1,0 +1,25 @@
+name: Draw ZMK keymaps
+
+on:
+  workflow_dispatch:  # can be triggered manually
+  workflow_run:       # only trigger, when the build workflow succeeded
+    workflows: ["CI build"]
+    types:
+      - completed
+  push:               # automatically run on changes to following paths
+    paths:
+      # - "config/*.keymap"
+      # - "config/*.dtsi"
+      - "keymap_drawer.config.yaml"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
+      config_path: "keymap_drawer.config.yaml"  # config file, ignored if not exists
+      output_folder: "svg"                      # path to save produced SVG and keymap YAML files
+      amend_commit: true                        # whether to amend the commit or create a new one
+      install_branch: main                      # trying new features: svg_extra_style

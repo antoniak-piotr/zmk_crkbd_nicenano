@@ -1,0 +1,278 @@
+layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layers:
+  default:
+  - ''
+  - {t: Q, h: config}
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - ''
+  - ''
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''
+  - ''
+  - {t: Z, h: LSHFT}
+  - X
+  - {t: C, h: LALT}
+  - {t: V, h: LCTL}
+  - B
+  - N
+  - {t: M, h: LCTL}
+  - {t: ',', h: LALT}
+  - .
+  - {t: /, h: RSHFT}
+  - ''
+  - {t: ESC, h: LWIN}
+  - {t: ENTER, h: red}
+  - ''
+  - ''
+  - {t: SPACE, h: green}
+  - {t: BACKSPACE, h: RALT, s: DELETE}
+  green:
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - ''
+  - ''
+  - TAB
+  - ''
+  - ''
+  - ''
+  - ''
+  - '-'
+  - '='
+  - (
+  - )
+  - ':'
+  - ''
+  - ''
+  - LSHFT
+  - ''
+  - LALT
+  - ''
+  - ''
+  - '`'
+  - ''''
+  - {t: '[', h: LALT}
+  - ']'
+  - {t: \, h: RSHFT}
+  - ''
+  - {t: ESC, h: LWIN}
+  - {t: ENTER, h: red}
+  - ''
+  - ''
+  - {type: held}
+  - DEL
+  red:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - PSCRN
+  - ''
+  - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - ''
+  - ''
+  - LSHFT
+  - ''
+  - LALT
+  - LCTL
+  - F11
+  - F12
+  - LCTRL
+  - LALT
+  - ''
+  - RSHFT
+  - ''
+  - {t: ESC, h: LWIN}
+  - {type: held}
+  - ''
+  - ''
+  - {t: _, h: green}
+  - ''
+  orange:
+  - ''
+  - ESC
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BACKSPACE, s: DELETE}
+  - ''
+  - ''
+  - TAB
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LEFT
+  - UP
+  - RIGHT
+  - ENTER
+  - ''
+  - ''
+  - LSHFT
+  - ''
+  - LALT
+  - LCTL
+  - ''
+  - ''
+  - HOME
+  - DOWN
+  - END
+  - RSHFT
+  - ''
+  - {t: ESC, h: LWIN}
+  - {type: held}
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  config:
+  - ''
+  - {type: held}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+combos:
+- p: [1, 13]
+  k: '!'
+  l: [default, green, red]
+- p: [2, 14]
+  k: '@'
+  l: [default, green, red]
+- p: [3, 15]
+  k: '#'
+  l: [default, green, red]
+- p: [4, 16]
+  k: $
+  l: [default, green, red]
+- p: [5, 17]
+  k: '%'
+  l: [default, green, red]
+- p: [6, 18]
+  k: ^
+  l: [default, green, red]
+- p: [7, 19]
+  k: '&'
+  l: [default, green, red]
+- p: [8, 20]
+  k: '*'
+  l: [default, green, red]
+- p: [9, 21]
+  k: LPRN
+  l: [default, green, red]
+- p: [10, 22]
+  k: RPRN
+  l: [default, green, red]
+- p: [16, 28]
+  k: (
+  l: [default, green, red]
+- p: [19, 31]
+  k: )
+  l: [default, green, red]
+- p: [15, 27]
+  k: '['
+  l: [default, green, red]
+- p: [20, 32]
+  k: ']'
+  l: [default, green, red]
+- p: [14, 26]
+  k: '{'
+  l: [default, green, red]
+- p: [21, 33]
+  k: '}'
+  l: [default, green, red]
+- p: [15, 16]
+  k: TAB
+  l: [default, green, red]
+- p: [19, 20]
+  k: {t: BACKSPACE, s: DELETE}
+  l: [default, green, red]
+- p: [25, 34]
+  k: '&caps_word'
+  l: [default, green, red]
+- p: [16, 19]
+  k: '&caps_word'
+  l: [default, green, red]
