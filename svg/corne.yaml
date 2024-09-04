@@ -1,105 +1,8 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  default:
-  - {type: none}
-  - {t: Q, h: config}
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {type: none}
-  - {type: none}
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - ';:'
-  - {type: none}
-  - {type: none}
-  - {t: Z, h: LSHFT}
-  - X
-  - {t: C, h: LALT}
-  - {t: V, h: LCTL}
-  - B
-  - N
-  - {t: M, h: LCTL}
-  - {t: ',<', h: LALT}
-  - .>
-  - {t: /, h: RSHFT}
-  - {type: none}
-  - {t: ESC, h: LWIN}
-  - {t: ENTER, h: red}
-  - {type: none}
-  - {type: none}
-  - {t: SPACE, h: green}
-  - {t: BACKSPACE, h: RALT, s: DELETE}
-  green:
-  - {type: none}
-  - 1!
-  - 2@
-  - 3#
-  - 4$
-  - 5%
-  - 6^
-  - 7&
-  - 8*
-  - 9(
-  - 0)
-  - {type: none}
-  - {type: none}
-  - TAB
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - '-'
-  - '='
-  - (
-  - )
-  - ':'
-  - {type: none}
-  - {type: none}
-  - LSHFT
-  - {type: none}
-  - LALT
-  - {type: none}
-  - {type: none}
-  - '`~'
-  - ''''
-  - {t: '[{', h: LALT}
-  - ']}'
-  - {t: \|, h: RSHFT}
-  - {type: none}
-  - {t: ESC, h: LWIN}
-  - {t: ENTER, h: red}
-  - {type: none}
-  - {type: none}
-  - {type: held}
-  - DEL
-  red:
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {t: PSCRN, h: '$$mdi:crop$$'}
-  - {type: none}
-  - {type: none}
+  ground: [TAB, Q, W, E, R, T, Y, U, I, O, P, BSPC, LSHFT, A, S, D, F, G, H, J, K, L, ';:', '''', LCTRL, Z, X, C, V, B, N, M, ',<', .>, /, nums, LGUI, LALT, SPACE,
+    ENTER, BSPC, special]
+  nums:
   - F1
   - F2
   - F3
@@ -110,108 +13,78 @@ layers:
   - F8
   - F9
   - F10
-  - {type: none}
-  - {type: none}
-  - LSHFT
-  - {type: none}
-  - LALT
-  - LCTL
   - F11
   - F12
-  - LCTRL
-  - LALT
-  - {type: none}
-  - RSHFT
-  - {type: none}
-  - {t: ESC, h: LWIN}
+  - ''
+  - 1!
+  - 2@
+  - 3#
+  - 4$
+  - 5%
+  - 6^
+  - 7&
+  - 8*
+  - 9(
+  - 0)
+  - BSPC
+  - ''
+  - (
+  - '['
+  - '{'
+  - <
+  - +
+  - '-'
+  - '>'
+  - '}'
+  - ']'
+  - )
   - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  special:
+  - ''
+  - '`~'
+  - ''''
+  - '"'
+  - ''
+  - BACKSPACE
+  - PRINTSCREEN
+  - SCROLLLOCK
+  - PAUSE BREAK
   - {type: none}
   - {type: none}
-  - {t: _, h: green}
-  - {type: none}
-  orange:
-  - {type: none}
-  - ESC
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {t: BACKSPACE, s: DELETE}
-  - {type: none}
-  - {type: none}
-  - TAB
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {t: LEFT, h: '$$mdi:chevron-left$$'}
+  - BACKSPACE
+  - ''
+  - {t: PGUP, h: '$$mdi:chevron-triple-up$$'}
+  - {t: PGDN, h: '$$mdi:chevron-triple-down$$'}
+  - Q
   - {t: UP, h: '$$mdi:chevron-up$$'}
-  - {t: RIGHT, h: '$$mdi:chevron-right$$'}
-  - ENTER
-  - {type: none}
-  - {type: none}
-  - LSHFT
-  - {type: none}
-  - LALT
-  - LCTL
-  - {type: none}
-  - {type: none}
+  - E
+  - INSERT
   - HOME
-  - {t: DOWN, h: '$$mdi:chevron-down$$'}
+  - PAGE UP
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - ''
+  - HOME
   - END
-  - RSHFT
+  - {t: LEFT, h: '$$mdi:chevron-left$$'}
+  - {t: DOWN, h: '$$mdi:chevron-down$$'}
+  - {t: RIGHT, h: '$$mdi:chevron-right$$'}
+  - DELETE
+  - END
+  - PAGE DOWN
   - {type: none}
-  - {t: ESC, h: LWIN}
+  - {type: none}
+  - {type: none}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {type: held}
-  - {type: none}
-  - {type: none}
-  - {type: held}
-  - {type: none}
-  config:
-  - {type: none}
-  - {type: held}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {t: BT, h: CLR}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
