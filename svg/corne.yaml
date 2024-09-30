@@ -1,6 +1,92 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  ground:
+  ALPHA:
+  - {type: none}
+  - {type: none}
+  - ESC
+  - W
+  - F
+  - G
+  - M
+  - L
+  - U
+  - BSPC
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - TAB
+  - A
+  - R
+  - S
+  - N
+  - E
+  - I
+  - DEL
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - C
+  - D
+  - T
+  - H
+  - O
+  - Y
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - LALT
+  - SPACE
+  - ENTER
+  - BSPC
+  - {type: none}
+  MACRO:
+  - {type: none}
+  - {type: none}
+  - ESC
+  - W
+  - F
+  - G
+  - M
+  - L
+  - U
+  - BSPC
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - TAB
+  - A
+  - R
+  - S
+  - N
+  - E
+  - I
+  - DEL
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - C
+  - D
+  - T
+  - H
+  - O
+  - Y
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - LALT
+  - SPACE
+  - ENTER
+  - BSPC
+  - {type: none}
+  NUM:
   - {type: none}
   - {type: none}
   - ESC

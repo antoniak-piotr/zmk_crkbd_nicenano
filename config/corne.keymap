@@ -6,7 +6,7 @@
         compatible = "zmk,keymap";
 
             //  #           #           #           #           #           #           #           #           #           #           #           #           #           #
-        ground {
+        ALPHA {
             bindings = <
                 &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
                 &none       &none       &kp TAB     &kp A       &kp R       &kp S                   &kp N       &kp E       &kp I       &kp DEL     &none       &none
@@ -14,5 +14,26 @@
                                                     &none       &kp LALT    &kp SPACE               &kp ENTER   &kp BSPC    &none
             >;
         };
+
+        MACRO {
+            bindings = <
+                &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
+                &none       &none       &kp TAB     &kp A       &kp R       &kp S                   &kp N       &kp E       &kp I       &kp DEL     &none       &none
+                &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
+                                                    &none       &kp LALT    &kp SPACE               &kp ENTER   &kp BSPC    &none
+            >;
+        };
+
+        NUM {
+            bindings = <
+                &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
+                &none       &none       &kp TAB     &kp A       &kp R       &kp S                   &kp N       &kp E       &kp I       &kp DEL     &none       &none
+                &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
+                                                    &none       &kp LALT    &kp SPACE               &kp ENTER   &kp BSPC    &none
+            >;
+        };
+
+
+
     };
 };
