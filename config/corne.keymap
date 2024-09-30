@@ -5,7 +5,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-/           /  #           #           #           #           #           #           #           #           #           #           #           #           #           #
+            //  #           #           #           #           #           #           #           #           #           #           #           #           #           #
         ground {
             bindings = <
                 &none       &none       &kp TAB     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
