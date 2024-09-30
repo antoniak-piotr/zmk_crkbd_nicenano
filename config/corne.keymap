@@ -5,35 +5,127 @@
     keymap {
         compatible = "zmk,keymap";
 
-            //  #           #           #           #           #           #           #           #           #           #           #           #           #           #
-        ALPHA {
+            //  0           1           2           3           4           5           #           6           7           8           9           10          11          #
+        DEF {
             bindings = <
                 &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
                 &none       &none       &kp TAB     &kp A       &kp R       &kp S                   &kp N       &kp E       &kp I       &kp DEL     &none       &none
                 &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
-                                                    &none       &kp LALT    &kp SPACE               &kp ENTER   &kp BSPC    &none
-            >;
-        };
-
-        MACRO {
-            bindings = <
-                &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
-                &none       &none       &kp TAB     &kp A       &kp R       &kp S                   &kp N       &kp E       &kp I       &kp DEL     &none       &none
-                &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
-                                                    &none       &kp LALT    &kp SPACE               &kp ENTER   &kp BSPC    &none
+                                                    &none       &kp LWIN    &kp SPACE               &kp SPACE   &kp ENTER   &none
             >;
         };
 
         NUM {
             bindings = <
-                &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
-                &none       &none       &kp TAB     &kp A       &kp R       &kp S                   &kp N       &kp E       &kp I       &kp DEL     &none       &none
-                &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
-                                                    &none       &kp LALT    &kp SPACE               &kp ENTER   &kp BSPC    &none
+                &none       &none       &kp ESC     &kp MINUS   &kp UNDER   &none                   &kp N7      &kp N8      &kp N9      &kp BSPC    &none       &none
+                &none       &none       &none       &none       &none       &none                   &kp N4      &kp N5      &kp N6      &kp DEL     &none       &none
+                &none       &none       &none       &none       &none       &none                   &kp N1      &kp N2      &kp N3      &kp N0      &none       &none
+                                                    &none       &kp LWIN    &kp SPACE               &kp ENTER   &kp BSPC    &none
             >;
         };
 
+        NAV {
+            bindings = <
+                &none       &none       &kp ESC     &kp MINUS   &kp UNDER   &none                   &none       &none       &none       &kp BSPC    &none       &none
+                &none       &none       &none       &none       &none       &none                   &kp LEFT    &kp UP      &kp RIGHT   &kp DEL     &none       &none
+                &none       &none       &none       &none       &none       &none                   &none       &kp DOWN    &none       &none       &none       &none
+                                                    &none       &kp LWIN    &kp SPACE               &kp ENTER   &kp BSPC    &none
+            >;
+        };
+
+        // MACRO {
+        //     bindings = <
+        //         &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
+        //         &none       &none       &kp TAB     &kp A       &kp R       &kp S                   &kp N       &kp E       &kp I       &kp DEL     &none       &none
+        //         &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
+        //                                             &none       &kp LALT    &kp SPACE               &kp ENTER   &kp BSPC    &none
+        //     >;
+        // };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        // MISSING LETTERS
+        mq    {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF>; COMBO;};
+        mb    {key-positions = <4 5>; bindings = <&kp B>; layers = <DEF>; COMBO;};
+        mv    {key-positions = <15 16>; bindings = <&kp V>; layers = <DEF>; COMBO;};
+        mp    {key-positions = <16 17>; bindings = <&kp P>; layers = <DEF>; COMBO;};
+        mv    {key-positions = <27 28>; bindings = <&kp Z>; layers = <DEF>; COMBO;};
+        mp    {key-positions = <28 29>; bindings = <&kp X>; layers = <DEF>; COMBO;};
+
+        mj    {key-positions = <6 7>; bindings = <&kp J>; layers = <DEF>; COMBO;};
+        mk    {key-positions = <18 19>; bindings = <&kp K>; layers = <DEF>; COMBO;};
 
 
+
+        // // CAPSLOCK, CAPSWORD, NUMWORD
+        // clck    {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF COL>; COMBO;};                     // CAPSLOCK
+        // cwrd    {key-positions = <14 15>; bindings = <&caps_word>; layers = <DEF COL>; COMBO;};                 // CAPSWORD
+        // nwrd    {key-positions = <24 25>; bindings = <&num_word>; layers = <DEF COL>; COMBO;};                  // NUMWORD
+
+        // // ESC, TAB, DEL and BSPC
+        // esc     {key-positions = <11 12>; bindings = <&kp ESC>; layers = <DEF COL NUM NAV>; COMBO;};            // ESC
+        // tab     {key-positions = <12 13>; bindings = <&kp TAB>; layers = <DEF COL NUM NAV>; COMBO;};            // TAB
+        // bspc    {key-positions = <16 17>; bindings = <&kp BSPC>; layers = <DEF COL NUM NAV>; COMBO;};           // BSPC
+        // del     {key-positions = <17 18>; bindings = <&kp DEL>; layers = <DEF COL NUM NAV>; COMBO;};            // DEL
+
+        // // GRAVE, APOS
+        // grave   {key-positions = <14 24>; bindings = <&kp GRAVE>; layers = <DEF COL>; COMBO;};                  // `~
+        // apos    {key-positions = <15 25>; bindings = <&kp APOS>; layers = <DEF COL>; COMBO;};                   // '"
+        // // grave   {key-positions = <2 3>; bindings = <&kp GRAVE>; layers = <DEF COL>; COMBO;};                    // `~
+        // // apos    {key-positions = <6 7>; bindings = <&kp APOS>; layers = <DEF COL>; COMBO;};                     // '"
+        // // tilde   {key-positions = <1 2>; bindings = <&kp TILDE>; layers = <DEF COL>; COMBO;};                    // ~
+        // // dqt     {key-positions = <7 8>; bindings = <&kp DQT>; layers = <DEF COL>; COMBO;};                      // "
+
+        // // NUMERICS
+        // n1      {key-positions = <0 10>; bindings = <&kp N1>; layers = <DEF COL>; COMBO;};                      // 1!
+        // n2      {key-positions = <1 11>; bindings = <&kp N2>; layers = <DEF COL>; COMBO;};                      // 2@
+        // n3      {key-positions = <2 12>; bindings = <&kp N3>; layers = <DEF COL>; COMBO;};                      // 3#
+        // n4      {key-positions = <3 13>; bindings = <&kp N4>; layers = <DEF COL>; COMBO;};                      // 4$
+        // n5      {key-positions = <4 14>; bindings = <&kp N5>; layers = <DEF COL>; COMBO;};                      // 5%
+        // n6      {key-positions = <5 15>; bindings = <&kp N6>; layers = <DEF COL>; COMBO;};                      // 6^
+        // n7      {key-positions = <6 16>; bindings = <&kp N7>; layers = <DEF COL>; COMBO;};                      // 7&
+        // n8      {key-positions = <7 17>; bindings = <&n8>; layers = <DEF COL>; COMBO;};                         // 8|
+        // n9      {key-positions = <8 18>; bindings = <&n9>; layers = <DEF COL>; COMBO;};                         // 9_
+        // n0      {key-positions = <9 19>; bindings = <&n0>; layers = <DEF COL>; COMBO;};                         // 0?
+
+        // // NUM LAYER
+        // na      {key-positions = <16 26>; bindings = <&kp LS(A)>; layers = <NUM>; COMBO;};                      // A
+        // nb      {key-positions = <17 27>; bindings = <&kp LS(B)>; layers = <NUM>; COMBO;};                      // B
+        // nc      {key-positions = <18 28>; bindings = <&kp LS(C)>; layers = <NUM>; COMBO;};                      // C
+        // nd      {key-positions = <6 16>; bindings = <&kp LS(D)>; layers = <NUM>; COMBO;};                       // D
+        // ne      {key-positions = <7 17>; bindings = <&kp LS(E)>; layers = <NUM>; COMBO;};                       // E
+        // nf      {key-positions = <8 18>; bindings = <&kp LS(F)>; layers = <NUM>; COMBO;};                       // F
+        // nhd     {key-positions = <15 25>; bindings = <&hdm>; layers = <NUM>; COMBO;};                           // #$
+        // ncs     {key-positions = <19 29>; bindings = <&cmsm>; layers = <NUM>; COMBO;};                          // ,;
+
+        // // FUNCTION KEYS (CUSTOM)
+        // f2     {key-positions = <12 22>; bindings = <&kp LC(F2)>; layers = <NUM>; COMBO;};                      // Ctrl + F2 = Reset
+        // f7     {key-positions = <1 11>; bindings = <&kp LS(F7)>; layers = <NUM>; COMBO;};                       // Shift + F7 - Trace to next source line
+        // f8     {key-positions = <2 12>; bindings = <&kp LS(F8)>; layers = <NUM>; COMBO;};                       // Shift + F8 - Run until the function returns
+        // f9     {key-positions = <3 13>; bindings = <&kp LC(F9)>; layers = <NUM>; COMBO;};                       // Ctrl + F9 - Compile (Make)
+
+        // // PAR, BKT
+        // lpar    {key-positions = <17 27>; bindings = <&lpar>; layers = <DEF COL>; COMBO;};                      // (< [{
+        // rpar    {key-positions = <18 28>; bindings = <&rpar>; layers = <DEF COL>; COMBO;};                      // )> ]}
+        // // lpar    {key-positions = <17 27>; bindings = <&lplt>; layers = <DEF COL>; COMBO;};                      // (<
+        // // rpar    {key-positions = <18 28>; bindings = <&rpgt>; layers = <DEF COL>; COMBO;};                      // )>
+        // // lbkt    {key-positions = <11 21>; bindings = <&kp LBKT>; layers = <DEF COL>; COMBO;};                   // [{
+        // // rbkt    {key-positions = <12 22>; bindings = <&kp RBKT>; layers = <DEF COL>; COMBO;};                   // ]}
+
+        // // EQUAL, COLON
+        // colon   {key-positions = <13 23>; bindings = <&kp COLON>; layers = <DEF COL>; COMBO;};                  // :
+        // equal   {key-positions = <16 26>; bindings = <&equal>; layers = <DEF COL>; COMBO;};                     // = :=
+
+        // // MINUS, PLUS, DIV and MUL
+        // plus    {key-positions = <13 14>; bindings = <&kp PLUS>; layers = <DEF COL>; COMBO;};                   // +
+        // minus   {key-positions = <15 16>; bindings = <&kp MINUS>; layers = <DEF COL>; COMBO;};                  // -_
+        // mul     {key-positions = <23 24>; bindings = <&mul>; layers = <DEF COL>; COMBO;};                       // *
+        // div     {key-positions = <25 26>; bindings = <&div>; layers = <DEF COL>; COMBO;};                       // /
+
+        // // NAV LAYERS COMBOS
+        // home    {key-positions = <16 26>; bindings = <&kp HOME>; layers = <NAV>; COMBO;};                       // HOME
+        // end     {key-positions = <18 28>; bindings = <&kp END>; layers = <NAV>; COMBO;};                        // END
     };
 };
