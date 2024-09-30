@@ -11,31 +11,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        ground {
-            bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R     &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp BSPC
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F     &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V     &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mo 1
-                         &kp LGUI  &kp LALT  &kp SPACE    &kp ENTER  &kp BSPC  &mo 2
-            >;
-        };
-
-        nums {
-            bindings = <
-&kp F1  &kp F2                &kp F3            &kp F4          &kp F5         &kp F6      &kp F7     &kp F8            &kp F9           &kp F10            &kp F11                &kp F12
-&trans  &kp N1                &kp N2            &kp N3          &kp N4         &kp N5      &kp N6     &kp N7            &kp N8           &kp N9             &kp N0                 &kp BSPC
-&trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LESS_THAN  &kp PLUS    &kp MINUS  &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &trans
-                                                &trans          &trans         &trans      &trans     &trans            &trans
-            >;
-        };
-
-        special {
-            bindings = <
-&trans  &kp GRAVE  &kp SQT    &kp DOUBLE_QUOTES  &trans    &kp BACKSPACE    &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &none  &none  &kp BACKSPACE
-&trans  &kp PG_UP  &kp PG_DN  &kp Q              &kp UP    &kp E            &kp INSERT       &kp HOME        &kp PAGE_UP      &none  &none  &none
-&trans  &kp HOME   &kp END    &kp LEFT           &kp DOWN  &kp RIGHT        &kp DELETE       &kp END         &kp PAGE_DOWN    &none  &none  &none
-                              &trans             &trans    &trans           &trans           &trans          &trans
-            >;
-        };
+//  #           #           #           #           #           #           #           #           #           #           #           #           #           #
+        ground { bindings = <
+    &none       &none       &kp TAB     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
+    &none       &none       &kp LSHFT   &kp A       &kp R       &kp S                   &kp N       &kp E       &kp I       &kp DEL     &none       &none
+    &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
+                                        &kp LGUI    &kp LALT    &kp SPACE               &kp ENTER   &kp BSPC    &mo 2
+        >;};
     };
 };
