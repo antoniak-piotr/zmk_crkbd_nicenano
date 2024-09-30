@@ -1,9 +1,9 @@
-name: Draw ZMK keymaps
+name: Draw
 
 on:
   workflow_dispatch:  # can be triggered manually
   workflow_run:       # only trigger, when the build workflow succeeded
-    workflows: ["CI build"]
+    workflows: ["Build"]
     types:
       - completed
   push:               # automatically run on changes to following paths
@@ -22,4 +22,4 @@ jobs:
       config_path: "keymap_drawer.config.yaml"  # config file, ignored if not exists
       output_folder: "svg"                      # path to save produced SVG and keymap YAML files
       amend_commit: true                        # whether to amend the commit or create a new one
-      install_branch: main                      # trying new features: svg_extra_style
+      # install_branch: main                      # trying new features: svg_extra_style
