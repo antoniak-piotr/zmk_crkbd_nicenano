@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  ALPHA:
+  '0':
   - {type: none}
   - {type: none}
   - ESC
@@ -38,94 +38,119 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - LALT
+  - LWIN
+  - SPACE
   - SPACE
   - ENTER
-  - BSPC
   - {type: none}
-  MACRO:
+  '1':
   - {type: none}
   - {type: none}
   - ESC
-  - W
-  - F
-  - G
-  - M
-  - L
-  - U
+  - '-'
+  - _
+  - {type: none}
+  - 7&
+  - 8*
+  - 9(
   - BSPC
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - TAB
-  - A
-  - R
-  - S
-  - N
-  - E
-  - I
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - 4$
+  - 5%
+  - 6^
   - DEL
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - C
-  - D
-  - T
-  - H
-  - O
-  - Y
   - {type: none}
   - {type: none}
   - {type: none}
+  - 1!
+  - 2@
+  - 3#
+  - 0)
   - {type: none}
-  - LALT
+  - {type: none}
+  - {type: none}
+  - LWIN
   - SPACE
   - ENTER
   - BSPC
   - {type: none}
-  NUM:
+  '2':
   - {type: none}
   - {type: none}
   - ESC
-  - W
-  - F
-  - G
-  - M
-  - L
-  - U
+  - '-'
+  - _
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
   - BSPC
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - TAB
-  - A
-  - R
-  - S
-  - N
-  - E
-  - I
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {t: LEFT, h: '$$mdi:chevron-left$$'}
+  - {t: UP, h: '$$mdi:chevron-up$$'}
+  - {t: RIGHT, h: '$$mdi:chevron-right$$'}
   - DEL
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - C
-  - D
-  - T
-  - H
-  - O
-  - Y
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - LALT
+  - {t: DOWN, h: '$$mdi:chevron-down$$'}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - LWIN
   - SPACE
   - ENTER
   - BSPC
   - {type: none}
+combos:
+- p: [3, 4]
+  k: Q
+  l: ['0']
+- p: [4, 5]
+  k: B
+  l: ['0']
+- p: [15, 16]
+  k: V
+  l: ['0']
+- p: [16, 17]
+  k: P
+  l: ['0']
+- p: [27, 28]
+  k: Z
+  l: ['0']
+- p: [28, 29]
+  k: X
+  l: ['0']
+- p: [6, 7]
+  k: J
+  l: ['0']
+- p: [18, 19]
+  k: K
+  l: ['0']
