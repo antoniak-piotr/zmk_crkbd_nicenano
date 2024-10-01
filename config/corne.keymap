@@ -179,14 +179,17 @@
         SMORPH(space,   &kp SPACE,  &kp UNDER)
         SMORPH(equal,   &kp EQUAL,  &assign)
 
-        SMORPH(dot,     &kp DOT,    &kp COLON)
-        SMORPH(comma,   &kp COMMA,  &kp SEMI)
+        SMORPH(sdot,    &kp DOT,    &kp COLON)
+        SMORPH(scomma,  &kp COMMA,  &kp SEMI)
+        CMORPH(dot,     &sdot,      &kp BSLH)
+        CMORPH(comma,   &scomma,    &kp FSLH)
 
         SMORPH(plus,    &kp PLUS,   &kp STAR)
         SMORPH(minus,   &kp MINUS,  &kp SLASH)
 
         SMORPH(excl,    &kp EXCL,   &kp QMARK)
-        SMORPH(hash,    &kp HASH,   &kp DLLR)
+        SMORPH(hshdlr,  &kp HASH,   &kp DLLR)
+        CMORPH(hash,    &hshdlr,    &kp PRCNT)
         SMORPH(caret,   &kp CARET,  &kp AT)
         SMORPH(amps,    &kp AMPS,   &kp PIPE)
 

@@ -77,15 +77,15 @@ parse_config:
 
     # SHIFT & CONTROL BASED MOD-MORPH BEHAVIORS
     "&excl": {tap: "!?"}
-    "&hash": {tap: "#$"}
+    "&hash": {tap: "#$%"}
     "&caret": {tap: "^@"}
     "&amps": {tap: "&|"}
 
     "&plus": {tap: "+*"}
     "&minus": {tap: "-/"}
-    "&dot": {tap: ".:"}
+    "&dot": {tap: ".:\\"}
 
-    "&comma": {tap: ",;"}
+    "&comma": {tap: ",;/"}
     "&lpar": {tap: "(<[{"}
     "&rpar": {tap: ")>}]"}
 
@@ -182,6 +182,9 @@ parse_config:
     cwrd: {width: 41}
     nwrd: {width: 41}
 
+    dot: {width: 27}
+    comma: {width: 27}
+
     lpar: {width: 31}
     rpar: {width: 31}
 
@@ -190,8 +193,8 @@ parse_config:
     # bsdl: {width: 25}
     # bspc: {width: 27}
     # del: {width: 27}
-    home: {width: 31}
-    end: {width: 31}
+    # home: {width: 31}
+    # end: {width: 31}
     # f2: {width: 41}
     # f7: {width: 41}
     # f8: {width: 41}
