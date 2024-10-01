@@ -38,7 +38,7 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - LWIN
+  - {t: '%', h: LWIN}
   - '='
   - SPACE
   - ENTER

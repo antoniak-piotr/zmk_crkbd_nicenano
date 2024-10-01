@@ -21,7 +21,7 @@
                 &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
                 &none       &none       &kp TAB     &mt ALT A   &mt CTL R   &mt SFT S               &mt SFT N   &mt CTL E   &mt ALT I   &kp DEL     &none       &none
                 &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
-                                                    &none       &mt LWIN PERC &kp EQUAL             &kp SPACE   &kp ENTER   &none
+                                                    &none       &mt LWIN PRCNT &kp EQUAL            &kp SPACE   &kp ENTER   &none
             >;
         };
 
