@@ -168,27 +168,27 @@
             mods = <(MODS)>; \
         };
 
-    #define MORPH(NAME, BINDING1, BINDING2, MODS, KEEPMODS) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; \
-            bindings = <BINDING1>, <BINDING2>; \
-            mods = <(MODS)>; \
-            keep-mods = <(KEEPMODS)>; \
-        };
+    // #define MORPH(NAME, BINDING1, BINDING2, MODS, KEEPMODS) \
+    //     NAME: NAME { \
+    //         compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; \
+    //         bindings = <BINDING1>, <BINDING2>; \
+    //         mods = <(MODS)>; \
+    //         keep-mods = <(KEEPMODS)>; \
+    //     };
 
-    #define HOLD(NAME, BINDING1, BINDING2) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; tapping-term-ms = <200>; quick-tap-ms = <175>; \
-            bindings = <BINDING1>, <BINDING2>; \
-            flavor = "balanced"; \
-        };
+    // #define HOLD(NAME, BINDING1, BINDING2) \
+    //     NAME: NAME { \
+    //         compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; tapping-term-ms = <200>; quick-tap-ms = <175>; \
+    //         bindings = <BINDING1>, <BINDING2>; \
+    //         flavor = "balanced"; \
+    //     };
 
-    #define HOLD(NAME, BINDING1, BINDING2, FLAVOR) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; tapping-term-ms = <200>; quick-tap-ms = <175>; \
-            bindings = <BINDING1>, <BINDING2>; \
-            flavor = "FLAVOR"; \
-        };
+    // #define HOLD(NAME, BINDING1, BINDING2, FLAVOR) \
+    //     NAME: NAME { \
+    //         compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; tapping-term-ms = <200>; quick-tap-ms = <175>; \
+    //         bindings = <BINDING1>, <BINDING2>; \
+    //         flavor = "FLAVOR"; \
+    //     };
 
     behaviors {
         MORPH(space,    &kp SPACE,  &kp UNDER,          MOD_LSFT|MOD_RSFT)
