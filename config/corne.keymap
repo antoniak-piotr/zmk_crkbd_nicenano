@@ -56,6 +56,11 @@
     combos {
         compatible = "zmk,combos";
 
+        // // CAPSLOCK, CAPSWORD, NUMWORD
+        clck    {key-positions = <4 7>; bindings = <&kp CAPS>; layers = <DEF>; COMBO;};     // CAPSLOCK
+        cwrd    {key-positions = <16 19>; bindings = <&caps_word>; layers = <DEF>; COMBO;}; // CAPSWORD
+        // nwrd    {key-positions = <24 25>; bindings = <&num_word>; layers = <DEF COL>; COMBO;};                  // NUMWORD
+
         // MISSING LETTERS
         mq      {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF>; COMBO;};
         mb      {key-positions = <4 5>; bindings = <&kp B>; layers = <DEF>; COMBO;};
@@ -66,6 +71,7 @@
         mp      {key-positions = <7 8>; bindings = <&kp P>; layers = <DEF>; COMBO;};
         mv      {key-positions = <30 31>; bindings = <&kp V>; layers = <DEF>; COMBO;};
         mk      {key-positions = <31 32>; bindings = <&kp K>; layers = <DEF>; COMBO;};
+
 
         // GRAVE, APOS
         grave   {key-positions = <5 17>; bindings = <&kp GRAVE>; layers = <DEF>; COMBO;};
@@ -91,10 +97,6 @@
 
 
 
-        // // CAPSLOCK, CAPSWORD, NUMWORD
-        // clck    {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF COL>; COMBO;};                     // CAPSLOCK
-        // cwrd    {key-positions = <14 15>; bindings = <&caps_word>; layers = <DEF COL>; COMBO;};                 // CAPSWORD
-        // nwrd    {key-positions = <24 25>; bindings = <&num_word>; layers = <DEF COL>; COMBO;};                  // NUMWORD
 
         // // ESC, TAB, DEL and BSPC
         // esc     {key-positions = <11 12>; bindings = <&kp ESC>; layers = <DEF COL NUM NAV>; COMBO;};            // ESC
