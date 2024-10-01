@@ -386,6 +386,22 @@ text.combo {
 <rect rx="6" ry="6" x="242" y="112" width="21" height="15" class="combo"/>
 <text x="252" y="119" class="combo tap">-</text>
 </g>
+<g class="combo combopos-16">
+<rect rx="6" ry="6" x="186" y="48" width="21" height="15" class="combo"/>
+<text x="196" y="56" class="combo tap">!</text>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="242" y="56" width="21" height="15" class="combo"/>
+<text x="252" y="63" class="combo tap">#</text>
+</g>
+<g class="combo combopos-18">
+<rect rx="6" ry="6" x="578" y="56" width="21" height="15" class="combo"/>
+<text x="588" y="63" class="combo tap">^</text>
+</g>
+<g class="combo combopos-19">
+<rect rx="6" ry="6" x="634" y="48" width="21" height="15" class="combo"/>
+<text x="644" y="56" class="combo tap">&amp;</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 331)" class="layer-1">

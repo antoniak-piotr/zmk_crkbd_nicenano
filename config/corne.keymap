@@ -85,6 +85,13 @@
         plus    {key-positions = <15 27>; bindings = <&kp PLUS>; layers = <DEF>; COMBO;};
         minus   {key-positions = <16 28>; bindings = <&kp MINUS>; layers = <DEF>; COMBO;};
 
+        // OTHER SYMBOLS
+        excl    {key-positions = <3 15>; bindings = <&kp EXCL>; layers = <DEF>; COMBO;};
+        hash    {key-positions = <4 16>; bindings = <&kp HASH>; layers = <DEF>; COMBO;};
+        caret   {key-positions = <7 19>; bindings = <&kp CARET>; layers = <DEF>; COMBO;};
+        amps    {key-positions = <8 20>; bindings = <&kp AMPS>; layers = <DEF>; COMBO;};
+
+
 
         // // CAPSLOCK, CAPSWORD, NUMWORD
         // clck    {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF COL>; COMBO;};                     // CAPSLOCK
