@@ -1,6 +1,6 @@
 draw_config:
   # key_h: 60
-  combo_w: 21
+  combo_w: 27
   combo_h: 15
   small_pad: 8
   shrink_wide_legends: 5
@@ -182,8 +182,8 @@ parse_config:
     cwrd: {width: 41}
     nwrd: {width: 41}
 
-    dot: {width: 27}
-    comma: {width: 27}
+    # dot: {width: 27}
+    # comma: {width: 27}
 
     lpar: {width: 31}
     rpar: {width: 31}
