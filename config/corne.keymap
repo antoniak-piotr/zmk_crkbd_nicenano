@@ -68,12 +68,12 @@
         comma   {key-positions = <18 30>; bindings = <&comma>; layers = <DEF>; COMBO;};     // ,;
 
         // PAR, BKT, BRC, etc.
-        lpar    {key-positions = <19 31>; bindings = <&kp LPAR>; layers = <DEF>; COMBO;};
-        rpar    {key-positions = <20 32>; bindings = <&kp RPAR>; layers = <DEF>; COMBO;};
+        lpar    {key-positions = <19 31>; bindings = <&lpar>; layers = <DEF>; COMBO;};      // (< [{
+        rpar    {key-positions = <20 32>; bindings = <&rpar>; layers = <DEF>; COMBO;};      // )> ]}
 
         // PLUS, MUL, MINUS, DIV
-        plus    {key-positions = <15 27>; bindings = <&kp PLUS>; layers = <DEF>; COMBO;};
-        minus   {key-positions = <16 28>; bindings = <&kp MINUS>; layers = <DEF>; COMBO;};
+        plus    {key-positions = <15 27>; bindings = <&plus>; layers = <DEF>; COMBO;};      // +*
+        minus   {key-positions = <16 28>; bindings = <&minus>; layers = <DEF>; COMBO;};     // -/
 
         // OTHER SYMBOLS
         excl    {key-positions = <3 15>; bindings = <&excl>; layers = <DEF>; COMBO;};       // !?
@@ -160,13 +160,28 @@
             mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
+    #define CMORPH(NAME, BINDING1, BINDING2) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; \
+            bindings = <BINDING1>, <BINDING2>; \
+            mods = <(MOD_LCTL|MOD_RCTL)>; \
+        };
+
     behaviors {
         SMORPH(dot,     &kp DOT,    &kp COLON)
         SMORPH(comma,   &kp COMMA,  &kp SEMI)
+
+        SMORPH(plus,    &kp PLUS,   &kp STAR)
+        SMORPH(minus,   &kp MINUS,  &kp SLASH)
 
         SMORPH(excl,    &kp EXCL,   &kp QMARK)
         SMORPH(hash,    &kp HASH,   &kp DLLR)
         SMORPH(caret,   &kp CARET,  &kp AT)
         SMORPH(amps,    &kp AMPS,   &kp PIPE)
+
+        SMORPH(lplt,    &kp LPAR,   &kp LT)
+        SMORPH(rpgt,    &kp RPAR,   &kp GT)
+        CMORPH(lpar,    &lplt,      &kp LBKT)
+        CMORPH(rpar,    &rpgt,      &kp RBKT)
     };
 };
