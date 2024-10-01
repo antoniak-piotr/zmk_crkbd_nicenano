@@ -63,62 +63,49 @@ parse_config:
     "&kp N8": {tap: "8*"}
     "&kp N9": {tap: "9("}
     "&kp N0": {tap: "0)"}
-    # "&n8": {tap: "8|"}
-    # "&n9": {tap: "9_"}
-    # "&n0": {tap: "0?"}
-
-    # "&kp LS(A)": {tap: "A"}
-    # "&kp LS(B)": {tap: "B"}
-    # "&kp LS(C)": {tap: "C"}
-    # "&kp LS(D)": {tap: "D"}
-    # "&kp LS(E)": {tap: "E"}
-    # "&kp LS(F)": {tap: "F"}
-
-    # "&hdm": {tap: "#$"}
 
     # SHIFTED KEYS
     "&kp COMMA": {tap: ",<"}
     "&kp DOT": {tap: ".>"}
-    "&kp SLASH": {tap: "/?", hold: ""}
+    "&kp SLASH": {tap: "/?"}
     "&kp BSLH": {tap: "\\|"}
     "&kp LBKT": {tap: "[{"}
     "&kp RBKT": {tap: "]}"}
     "&kp GRAVE": {tap: "`~"}
     "&kp APOS": {tap: "'\""}
     "&kp SEMI": {tap: ";:"}
-    "&mt LC(SLASH) SLASH": {tap: "/?"}
 
-    # CUSTOM FUNCTION KEYS
-    "&kp LC(F2)": {tap: RESET}
-    "&kp LS(F7)": {tap: LINE}
-    "&kp LS(F8)": {tap: FUNC}
-    "&kp LC(F9)": {tap: COMP}
+    # SHIFT & CONTROL BASED MOD-MORPH BEHAVIORS
+    "&excl": {tap: "!?"}
+    "&hash": {tap: "#$"}
+    "&caret": {tap: "^@"}
+    "&amps": {tap: "&|"}
 
-    # # BSPC, DEL, BSDL
-    # "&kp BSPC": {tap: BSP}
-    # "&bsdl": {tap: BSDL}
+    "&plus": {tap: "+*"}
+    "&minus": {tap: "-/"}
+    "&dot": {tap: ".:"}
 
-    # CUT, COPY, PASTE
-    "&kp LC(X)": {tap: CUT}     # hold: $$mdi:content-cut$$
-    "&kp LC(C)": {tap: COPY}    # hold: $$mdi:content-copy$$
-    "&kp LC(V)": {tap: PASTE}   # hold: $$mdi:content-paste$$
-
-    # UNDO, REDO
-    "&kp LC(Z)": {tap: UNDO}
-    "&kp SC(Z)": {tap: REDO}
-
-    # Nawiasy i inne specjalne
+    "&comma": {tap: ",;"}
     "&lpar": {tap: "(<[{"}
     "&rpar": {tap: ")>}]"}
-    "&dot": {tap: ".:"}
-    "&comma": {tap: ",;"}
+
+    "&space": {tap: SPACE, hold: "_"}
+    "&equal": {tap: "=", hold: ":="}
+
+
+    # # CUT, COPY, PASTE
+    # "&kp LC(X)": {tap: CUT}     # hold: $$mdi:content-cut$$
+    # "&kp LC(C)": {tap: COPY}    # hold: $$mdi:content-copy$$
+    # "&kp LC(V)": {tap: PASTE}   # hold: $$mdi:content-paste$$
+
+    # # UNDO, REDO
+    # "&kp LC(Z)": {tap: UNDO}
+    # "&kp SC(Z)": {tap: REDO}
+
     # "&csm LALT 0": {tap: ",;", hold: LALT}
     # "&dcm LWIN 0": {tap: ".:", hold: LWIN}
     # "&dcm RSFT 0": {tap: ".:", hold: RSFT}
     # "&stex": {tap: "*!"}
-    "&plus": {tap: "+*"}
-    "&minus": {tap: "-/"}
-    "&equal": {tap: "= :="}
 
     # "&slbs": {tap: "/\\"}
     # "&sbm RSFT 0": {tap: "/\\", hold: RSFT}
