@@ -39,8 +39,8 @@ layers:
   - {type: none}
   - {type: none}
   - {t: '%', h: LWIN}
-  - '='
-  - SPACE
+  - {t: '=', s: '&assign'}
+  - {t: SPACE, s: _}
   - {t: ENTER, h: RALT}
   - {type: none}
   '1':

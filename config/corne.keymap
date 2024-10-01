@@ -20,7 +20,7 @@
                 &none   &none           &kp ESC         &kp W           &kp F           &kp G                   &kp M           &kp L           &kp U           &kp BSPC        &none   &none
                 &none   &none           &kp TAB         &mt ALT A       &mt CTL R       &mt SFT S               &mt SFT N       &mt CTL E       &mt ALT I       &kp DEL         &none   &none
                 &none   &none           &none           &kp C           &kp D           &kp T                   &kp H           &kp O           &kp Y           &none           &none   &none
-                                                        &none           &mt LWIN PRCNT  &kp EQUAL               &kp SPACE       &mt RALT ENTER  &none
+                                                        &none           &mt LWIN PRCNT  &equal                  &space          &mt RALT ENTER  &none
             >;
         };
 
@@ -168,6 +168,9 @@
         };
 
     behaviors {
+        SMORPH(space,   &kp SPACE,  &kp UNDER)
+        SMORPH(equal,   &kp EQUAL,  &assign)
+
         SMORPH(dot,     &kp DOT,    &kp COLON)
         SMORPH(comma,   &kp COMMA,  &kp SEMI)
 
@@ -183,5 +186,23 @@
         SMORPH(rpgt,    &kp RPAR,   &kp GT)
         CMORPH(lpar,    &lplt,      &kp LBKT)
         CMORPH(rpar,    &rpgt,      &kp RBKT)
+    };
+
+    macros {
+        assign: delphi_assign_operator_macro { // colon-equal operator
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings = <&macro_tap &kp COLON>, <&macro_tap &kp EQUAL>;
+        };
+
+        // dcfm: delphi_code_folding_macro { // code block folding
+        //     #binding-cells = <1>;
+        //     compatible = "zmk,behavior-macro-one-param";
+        //     bindings =
+        //         <&macro_press &kp LSHFT &kp LCTRL>,
+        //         <&macro_tap &kp K>,
+        //         <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+        //         <&macro_release &kp LSHFT &kp LCTRL>;
+        // };
     };
 };
