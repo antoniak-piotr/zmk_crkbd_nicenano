@@ -1,6 +1,6 @@
 draw_config:
   # key_h: 60
-  combo_w: 27
+  combo_w: 25
   combo_h: 15
   small_pad: 8
   shrink_wide_legends: 5
