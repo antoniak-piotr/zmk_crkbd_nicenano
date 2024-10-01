@@ -153,21 +153,20 @@
         // end     {key-positions = <18 28>; bindings = <&kp END>; layers = <NAV>; COMBO;};                        // END
     };
 
-    #define SMORPH(NAME, BINDING1, BINDING2) ( \
+    #define SMORPH(NAME, BINDING1, BINDING2) \
         NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; \
             bindings = <BINDING1>, <BINDING2>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
-        }; \
-    )
+        };
 
     behaviors {
-        SMORPH(excl1, &kp EXCL, &kp QMARK)            //  !?
+        SMORPH(excl, &kp EXCL, &kp QMARK)            //  !?
 
-        excl: exclamation_question_mark {
-            compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>;
-            bindings = <&kp EXCL>, <&kp QMARK>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
+        // excl: exclamation_question_mark {
+        //     compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>;
+        //     bindings = <&kp EXCL>, <&kp QMARK>;
+        //     mods = <(MOD_LSFT | MOD_RSFT)>;
+        // };
     };
 };
