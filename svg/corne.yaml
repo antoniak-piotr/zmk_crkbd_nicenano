@@ -41,7 +41,7 @@ layers:
   - {t: '%', h: LWIN}
   - '='
   - SPACE
-  - ENTER
+  - {t: ENTER, h: RALT}
   - {type: none}
   '1':
   - {type: none}
