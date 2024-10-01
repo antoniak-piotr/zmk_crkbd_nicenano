@@ -164,6 +164,6 @@
         SMORPH(excl,    &kp EXCL,   &kp QMARK)
         SMORPH(hash,    &kp HASH,   &kp DLLR)
         SMORPH(caret,   &kp CARET,  &kp AT)
-        SMORTH(amps,    &kp AMPS,   &kp PIPE)
+        SMORPH(amps,    &kp AMPS,   &kp PIPE)
     };
 };
