@@ -16,12 +16,12 @@ layers:
   - {type: none}
   - {type: none}
   - TAB
-  - A
-  - R
-  - S
-  - N
-  - E
-  - I
+  - {t: A, h: LALT}
+  - {t: R, h: LCTRL}
+  - {t: S, h: LSHFT}
+  - {t: N, h: LSHFT}
+  - {t: E, h: LCTRL}
+  - {t: I, h: LALT}
   - DEL
   - {type: none}
   - {type: none}
