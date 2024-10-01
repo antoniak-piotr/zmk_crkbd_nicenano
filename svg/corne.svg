@@ -327,16 +327,16 @@ text.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none"/>
 </g>
 <g class="combo combopos-0">
-<path d="M420,35 l-149,0" class="combo"/>
-<path d="M420,35 l149,0" class="combo"/>
-<rect rx="6" ry="6" x="400" y="28" width="41" height="15" class="combo"/>
-<text x="420" y="35" class="combo tap">CAPS</text>
+<path d="M420,42 l-93,0" class="combo"/>
+<path d="M420,42 l93,0" class="combo"/>
+<rect rx="6" ry="6" x="400" y="34" width="41" height="15" class="combo"/>
+<text x="420" y="42" class="combo tap">CAPS</text>
 </g>
 <g class="combo combopos-1">
-<path d="M420,91 l-149,0" class="combo"/>
-<path d="M420,91 l149,0" class="combo"/>
-<rect rx="6" ry="6" x="400" y="84" width="41" height="15" class="combo"/>
-<text x="420" y="91" class="combo tap">CWRD</text>
+<path d="M420,98 l-93,0" class="combo"/>
+<path d="M420,98 l93,0" class="combo"/>
+<rect rx="6" ry="6" x="400" y="90" width="41" height="15" class="combo"/>
+<text x="420" y="98" class="combo tap">CWRD</text>
 </g>
 <g class="combo combopos-2">
 <rect rx="6" ry="6" x="212" y="24" width="25" height="15" class="combo"/>
