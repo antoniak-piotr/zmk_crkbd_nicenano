@@ -10,47 +10,37 @@
 #define CTL LCTRL
 #define ALT LALT
 
-
 / {
     keymap {
         compatible = "zmk,keymap";
 
-            //  0           1           2           3           4           5           #           6           7           8           9           10          11          #
+            //  0       1               2               3               4               5                       6               7               8               9               10              11
         DEF {
             bindings = <
-                &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
-                &none       &none       &kp TAB     &mt ALT A   &mt CTL R   &mt SFT S               &mt SFT N   &mt CTL E   &mt ALT I   &kp DEL     &none       &none
-                &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
-                                                    &none       &mt LWIN PRCNT &kp EQUAL            &kp SPACE   &mt RALT ENTER   &none
+                &none   &none           &kp ESC         &kp W           &kp F           &kp G                   &kp M           &kp L           &kp U           &kp BSPC        &none   &none
+                &none   &none           &kp TAB         &mt ALT A       &mt CTL R       &mt SFT S               &mt SFT N       &mt CTL E       &mt ALT I       &kp DEL         &none   &none
+                &none   &none           &none           &kp C           &kp D           &kp T                   &kp H           &kp O           &kp Y           &none           &none   &none
+                                                        &none           &mt LWIN PRCNT  &kp EQUAL               &kp SPACE       &mt RALT ENTER  &none
             >;
         };
 
         NUM {
             bindings = <
-                &none       &none       &kp ESC     &kp MINUS   &kp UNDER   &none                   &kp N7      &kp N8      &kp N9      &kp BSPC    &none       &none
-                &none       &none       &none       &none       &none       &none                   &kp N4      &kp N5      &kp N6      &kp DEL     &none       &none
-                &none       &none       &none       &none       &none       &none                   &kp N1      &kp N2      &kp N3      &kp N0      &none       &none
-                                                    &none       &kp LWIN    &kp SPACE               &kp ENTER   &kp BSPC    &none
+                &none   &none           &kp ESC         &kp MINUS       &kp UNDER       &none                   &kp N7          &kp N8          &kp N9          &kp BSPC        &none   &none
+                &none   &none           &none           &none           &none           &none                   &kp N4          &kp N5          &kp N6          &kp DEL         &none   &none
+                &none   &none           &none           &none           &none           &none                   &kp N1          &kp N2          &kp N3          &kp N0          &none   &none
+                                                        &none           &kp LWIN        &kp SPACE               &kp ENTER       &kp BSPC        &none
             >;
         };
 
         NAV {
             bindings = <
-                &none       &none       &kp ESC     &kp MINUS   &kp UNDER   &none                   &none       &none       &none       &kp BSPC    &none       &none
-                &none       &none       &none       &none       &none       &none                   &kp LEFT    &kp UP      &kp RIGHT   &kp DEL     &none       &none
-                &none       &none       &none       &none       &none       &none                   &none       &kp DOWN    &none       &none       &none       &none
-                                                    &none       &kp LWIN    &kp SPACE               &kp ENTER   &kp BSPC    &none
+                &none   &none           &kp ESC         &kp MINUS       &kp UNDER       &none                   &none           &none           &none           &kp BSPC        &none   &none
+                &none   &none           &none           &none           &none           &none                   &kp LEFT        &kp UP          &kp RIGHT       &kp DEL         &none   &none
+                &none   &none           &none           &none           &none           &none                   &none           &kp DOWN        &none           &none           &none   &none
+                                                        &none           &kp LWIN        &kp SPACE               &kp ENTER       &kp BSPC        &none
             >;
         };
-
-        // MACRO {
-        //     bindings = <
-        //         &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
-        //         &none       &none       &kp TAB     &kp A       &kp R       &kp S                   &kp N       &kp E       &kp I       &kp DEL     &none       &none
-        //         &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
-        //                                             &none       &kp LALT    &kp SPACE               &kp ENTER   &kp BSPC    &none
-        //     >;
-        // };
     };
 
     #define COMBO timeout-ms = <125>
@@ -86,7 +76,7 @@
         minus   {key-positions = <16 28>; bindings = <&kp MINUS>; layers = <DEF>; COMBO;};
 
         // OTHER SYMBOLS
-        excl    {key-positions = <3 15>; bindings = <&kp EXCL>; layers = <DEF>; COMBO;};
+        excl    {key-positions = <3 15>; bindings = <&excl>; layers = <DEF>; COMBO;};
         hash    {key-positions = <4 16>; bindings = <&kp HASH>; layers = <DEF>; COMBO;};
         caret   {key-positions = <7 19>; bindings = <&kp CARET>; layers = <DEF>; COMBO;};
         amps    {key-positions = <8 20>; bindings = <&kp AMPS>; layers = <DEF>; COMBO;};
@@ -161,5 +151,27 @@
         // // NAV LAYERS COMBOS
         // home    {key-positions = <16 26>; bindings = <&kp HOME>; layers = <NAV>; COMBO;};                       // HOME
         // end     {key-positions = <18 28>; bindings = <&kp END>; layers = <NAV>; COMBO;};                        // END
+    };
+
+    #define SMORPH(name, long_name, binding1, binding2) ( \
+        name: long_name { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <binding1>, <binding2>; \
+            mods = <(MOD_LSFT | MOD_RSFT)>; \
+            // mods = <(MOD_L ## mod | MOD_R ## mod)>; \
+        }; \
+    )
+
+    behaviors {
+        SMORPH(excl, exclamation_question_mark, &kp EXCL, &kp QMARK)            //  !?
+
+        // excl: exclamation_question_mark {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp EXCL>, <&kp QMARK>;
+        //     mods = <(MOD_LSFT | MOD_RSFT)>;
+        //     // keep-mods = <(MOD_RSFT)>;
+        // };
     };
 };
