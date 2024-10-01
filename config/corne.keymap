@@ -77,9 +77,9 @@
 
         // OTHER SYMBOLS
         excl    {key-positions = <3 15>; bindings = <&excl>; layers = <DEF>; COMBO;};
-        hash    {key-positions = <4 16>; bindings = <&kp HASH>; layers = <DEF>; COMBO;};
-        caret   {key-positions = <7 19>; bindings = <&kp CARET>; layers = <DEF>; COMBO;};
-        amps    {key-positions = <8 20>; bindings = <&kp AMPS>; layers = <DEF>; COMBO;};
+        hash    {key-positions = <4 16>; bindings = <&hash>; layers = <DEF>; COMBO;};
+        caret   {key-positions = <7 19>; bindings = <&caret>; layers = <DEF>; COMBO;};
+        amps    {key-positions = <8 20>; bindings = <&amps>; layers = <DEF>; COMBO;};
 
 
 
@@ -161,12 +161,9 @@
         };
 
     behaviors {
-        SMORPH(excl, &kp EXCL, &kp QMARK)            //  !?
-
-        // excl: exclamation_question_mark {
-        //     compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>;
-        //     bindings = <&kp EXCL>, <&kp QMARK>;
-        //     mods = <(MOD_LSFT | MOD_RSFT)>;
-        // };
+        SMORPH(excl,    &kp EXCL,   &kp QMARK)      // "!?"
+        SMORPH(hash,    &kp HASH,   &kp DLLR)       // "#$"
+        SMORPH(caret,   &kp CARET,  &kp AT)         // "^@"
+        SMORTH(amps,    &kp AMPS, &kp PIPE)         // "&|"
     };
 };
