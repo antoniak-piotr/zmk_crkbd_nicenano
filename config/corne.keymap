@@ -162,14 +162,12 @@
     )
 
     behaviors {
-        // SMORPH(excl, &kp EXCL, &kp QMARK)            //  !?
+        SMORPH(excl1, &kp EXCL, &kp QMARK)            //  !?
 
         excl: exclamation_question_mark {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>;
             bindings = <&kp EXCL>, <&kp QMARK>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
-            // keep-mods = <(MOD_RSFT)>;
         };
     };
 };
