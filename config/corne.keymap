@@ -74,8 +74,13 @@
         apos    {key-positions = <6 18>; bindings = <&kp APOS>; layers = <DEF>; COMBO;};
 
         // DOT, COMMA
-        dot     {key-positions = <15 27>; bindings = <&kp DOT>; layers = <DEF>; COMBO;};
-        comma   {key-positions = <20 32>; bindings = <&kp COMMA>; layers = <DEF>; COMBO;};
+        dot     {key-positions = <17 29>; bindings = <&kp DOT>; layers = <DEF>; COMBO;};
+        comma   {key-positions = <18 30>; bindings = <&kp COMMA>; layers = <DEF>; COMBO;};
+
+        // PAR, BKT, BRC, etc.
+        lpar    {key-positions = <19 31>; bindings = <&kp LPAR>; layers = <DEF COL>; COMBO;};
+        rpar    {key-positions = <20 32>; bindings = <&kp RPAR>; layers = <DEF COL>; COMBO;};
+
 
         // // CAPSLOCK, CAPSWORD, NUMWORD
         // clck    {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF COL>; COMBO;};                     // CAPSLOCK
