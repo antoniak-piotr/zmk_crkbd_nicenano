@@ -61,14 +61,13 @@
         // MISSING LETTERS
         mq    {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF>; COMBO;};
         mb    {key-positions = <4 5>; bindings = <&kp B>; layers = <DEF>; COMBO;};
-        mv    {key-positions = <15 16>; bindings = <&kp V>; layers = <DEF>; COMBO;};
-        mp    {key-positions = <16 17>; bindings = <&kp P>; layers = <DEF>; COMBO;};
         mz    {key-positions = <27 28>; bindings = <&kp Z>; layers = <DEF>; COMBO;};
         mx    {key-positions = <28 29>; bindings = <&kp X>; layers = <DEF>; COMBO;};
 
         mj    {key-positions = <6 7>; bindings = <&kp J>; layers = <DEF>; COMBO;};
-        mk    {key-positions = <18 19>; bindings = <&kp K>; layers = <DEF>; COMBO;};
-
+        mp    {key-positions = <7 8>; bindings = <&kp P>; layers = <DEF>; COMBO;};
+        mv    {key-positions = <30 31>; bindings = <&kp V>; layers = <DEF>; COMBO;};
+        mk    {key-positions = <31 32>; bindings = <&kp K>; layers = <DEF>; COMBO;};
 
 
         // // CAPSLOCK, CAPSWORD, NUMWORD
