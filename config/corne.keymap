@@ -161,42 +161,57 @@
         // end     {key-positions = <18 28>; bindings = <&kp END>; layers = <NAV>; COMBO;};                        // END
     };
 
-    #define SMORPH(NAME, BINDING1, BINDING2) \
+    #define MORPH(NAME, BINDING1, BINDING2, MODS) \
         NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; \
             bindings = <BINDING1>, <BINDING2>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            mods = <(MODS)>; \
         };
 
-    #define CMORPH(NAME, BINDING1, BINDING2) \
+    #define MORPH(NAME, BINDING1, BINDING2, MODS, KEEPMODS) \
         NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; \
             bindings = <BINDING1>, <BINDING2>; \
-            mods = <(MOD_LCTL|MOD_RCTL)>; \
+            mods = <(MODS)>; \
+            keep-mods = <(KEEPMODS)>; \
+        };
+
+    #define HOLD(NAME, BINDING1, BINDING2) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; tapping-term-ms = <200>; quick-tap-ms = <175>; \
+            bindings = <BINDING1>, <BINDING2>; \
+            flavor = "balanced"; \
+        };
+
+    #define HOLD(NAME, BINDING1, BINDING2, FLAVOR) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; #binding-cells = <2>; tapping-term-ms = <200>; quick-tap-ms = <175>; \
+            bindings = <BINDING1>, <BINDING2>; \
+            flavor = "FLAVOR"; \
         };
 
     behaviors {
-        SMORPH(space,   &kp SPACE,  &kp UNDER)
-        SMORPH(equal,   &kp EQUAL,  &assign)
+        MORPH(space,    &kp SPACE,  &kp UNDER,          MOD_LSFT|MOD_RSFT)
+        MORPH(equal,    &kp EQUAL,  &assign,            MOD_LSFT|MOD_RSFT)
 
-        SMORPH(sdot,    &kp DOT,    &kp COLON)
-        SMORPH(scomma,  &kp COMMA,  &kp SEMI)
-        CMORPH(dot,     &sdot,      &kp BSLH)
-        CMORPH(comma,   &scomma,    &kp FSLH)
+        MORPH(sdot,     &kp DOT,    &kp COLON,          MOD_LSFT|MOD_RSFT)
+        MORPH(scomma,   &kp COMMA,  &kp SEMI,           MOD_LSFT|MOD_RSFT)
+        MORPH(dot,      &sdot,      &kp BSLH,           MOD_LCTL|MOD_RCTL)
+        MORPH(comma,    &scomma,    &mt LC(FSLH) FSLH,  MOD_LCTL|MOD_RCTL) // ,  MOD_RCTL)
 
-        SMORPH(plus,    &kp PLUS,   &kp STAR)
-        SMORPH(minus,   &kp MINUS,  &kp SLASH)
+        MORPH(plus,     &kp PLUS,   &kp STAR,           MOD_LSFT|MOD_RSFT)
+        MORPH(minus,    &kp MINUS,  &kp SLASH,          MOD_LSFT|MOD_RSFT)
 
-        SMORPH(excl,    &kp EXCL,   &kp QMARK)
-        SMORPH(hshdlr,  &kp HASH,   &kp DLLR)
-        CMORPH(hash,    &hshdlr,    &kp PRCNT)
-        SMORPH(caret,   &kp CARET,  &kp AT)
-        SMORPH(amps,    &kp AMPS,   &kp PIPE)
+        MORPH(excl,     &kp EXCL,   &kp QMARK,          MOD_LSFT|MOD_RSFT)
+        MORPH(hshdlr,   &kp HASH,   &kp DLLR,           MOD_LSFT|MOD_RSFT)
+        MORPH(hash,     &hshdlr,    &kp PRCNT,          MOD_LCTL|MOD_RCTL)
+        MORPH(caret,    &kp CARET,  &kp AT,             MOD_LSFT|MOD_RSFT)
+        MORPH(amps,     &kp AMPS,   &kp PIPE,           MOD_LSFT|MOD_RSFT)
 
-        SMORPH(lplt,    &kp LPAR,   &kp LT)
-        SMORPH(rpgt,    &kp RPAR,   &kp GT)
-        CMORPH(lpar,    &lplt,      &kp LBKT)
-        CMORPH(rpar,    &rpgt,      &kp RBKT)
+        MORPH(lplt,     &kp LPAR,   &kp LT,             MOD_LSFT|MOD_RSFT)
+        MORPH(rpgt,     &kp RPAR,   &kp GT,             MOD_LSFT|MOD_RSFT)
+        MORPH(lpar,     &lplt,      &kp LBKT,           MOD_LCTL|MOD_RCTL)
+        MORPH(rpar,     &rpgt,      &kp RBKT,           MOD_LCTL|MOD_RCTL)
     };
 
     macros {
