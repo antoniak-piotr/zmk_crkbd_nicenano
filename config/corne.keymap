@@ -21,7 +21,7 @@
                 &none       &none       &kp ESC     &kp W       &kp F       &kp G                   &kp M       &kp L       &kp U       &kp BSPC    &none       &none
                 &none       &none       &kp TAB     &mt ALT A   &mt CTL R   &mt SFT S               &mt SFT N   &mt CTL E   &mt ALT I   &kp DEL     &none       &none
                 &none       &none       &none       &kp C       &kp D       &kp T                   &kp H       &kp O       &kp Y       &none       &none       &none
-                                                    &none       &kp LWIN    &kp SPACE               &kp SPACE   &kp ENTER   &none
+                                                    &none       &kp LWIN    &kp EQUAL               &kp SPACE   &kp ENTER   &none
             >;
         };
 
@@ -59,16 +59,23 @@
         compatible = "zmk,combos";
 
         // MISSING LETTERS
-        mq    {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF>; COMBO;};
-        mb    {key-positions = <4 5>; bindings = <&kp B>; layers = <DEF>; COMBO;};
-        mz    {key-positions = <27 28>; bindings = <&kp Z>; layers = <DEF>; COMBO;};
-        mx    {key-positions = <28 29>; bindings = <&kp X>; layers = <DEF>; COMBO;};
+        mq      {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF>; COMBO;};
+        mb      {key-positions = <4 5>; bindings = <&kp B>; layers = <DEF>; COMBO;};
+        mz      {key-positions = <27 28>; bindings = <&kp Z>; layers = <DEF>; COMBO;};
+        mx      {key-positions = <28 29>; bindings = <&kp X>; layers = <DEF>; COMBO;};
 
-        mj    {key-positions = <6 7>; bindings = <&kp J>; layers = <DEF>; COMBO;};
-        mp    {key-positions = <7 8>; bindings = <&kp P>; layers = <DEF>; COMBO;};
-        mv    {key-positions = <30 31>; bindings = <&kp V>; layers = <DEF>; COMBO;};
-        mk    {key-positions = <31 32>; bindings = <&kp K>; layers = <DEF>; COMBO;};
+        mj      {key-positions = <6 7>; bindings = <&kp J>; layers = <DEF>; COMBO;};
+        mp      {key-positions = <7 8>; bindings = <&kp P>; layers = <DEF>; COMBO;};
+        mv      {key-positions = <30 31>; bindings = <&kp V>; layers = <DEF>; COMBO;};
+        mk      {key-positions = <31 32>; bindings = <&kp K>; layers = <DEF>; COMBO;};
 
+        // GRAVE, APOS
+        grave   {key-positions = <5 17>; bindings = <&kp GRAVE>; layers = <DEF>; COMBO;};
+        apos    {key-positions = <6 18>; bindings = <&kp APOS>; layers = <DEF>; COMBO;};
+
+        // DOT, COMMA
+        dot     {key-positions = <15 27>; bindings = <&kp DOT>; layers = <DEF>; COMBO;};
+        comma   {key-positions = <20 32>; bindings = <&kp COMMA>; layers = <DEF>; COMBO;};
 
         // // CAPSLOCK, CAPSWORD, NUMWORD
         // clck    {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF COL>; COMBO;};                     // CAPSLOCK
