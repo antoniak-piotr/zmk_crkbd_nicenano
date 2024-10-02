@@ -39,8 +39,8 @@ layers:
   - {type: none}
   - {type: none}
   - {t: '=', h: LWIN}
-  - _
-  - SPACE
+  - {t: _, h: '1'}
+  - {t: SPACE, h: '2'}
   - {t: ENTER, h: RALT}
   - {type: none}
   '1':
@@ -82,7 +82,7 @@ layers:
   - {type: none}
   - {type: none}
   - {t: '=', h: LWIN}
-  - ''
+  - {type: held}
   - SPACE
   - {t: ENTER, h: RALT}
   - {type: none}
@@ -126,7 +126,7 @@ layers:
   - {type: none}
   - {t: '=', h: LWIN}
   - _
-  - ''
+  - {type: held}
   - {t: ENTER, h: RALT}
   - {type: none}
 combos:
