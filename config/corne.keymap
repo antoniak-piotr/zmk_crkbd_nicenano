@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEF 0           // QWERTY
-#define NUM 1           // NUMBER & FUNCTION KEYS
+#define EXT 1           // NUMBER & FUNCTION KEYS
 #define NAV 2           // NAVIGATION
 #define SYS 3           // SYSTEM (Bluetooth configuration, etc.)
 
@@ -24,12 +24,12 @@
             >;
         };
 
-        NUM {
+        EXT {
             bindings = <
-                &none   &none           &kp ESC         &none           &none           &none                   &kp N7          &kp N8          &kp N9          &kp BSPC        &none   &none
-                &none   &none           &kp TAB         &none           &none           &none                   &kp N4          &kp N5          &kp N6          &kp DEL         &none   &none
-                &none   &none           &none           &none           &none           &none                   &kp N1          &kp N2          &kp N3          &none           &none   &none
-                                                        &none           &equal          &trans                  &lt NAV SPACE   &mr RALT ENTER  &none
+                &none   &none           &kp ESC         &kp F1          &kp F2          &kp F3                  &kp N7          &kp N8          &kp N9          &kp BSPC        &none   &none
+                &none   &none           &kp TAB         &mt ALT F4      &mt CTL F5      &mt SFT F6              &mt SFT N4      &mt CTL N5      &mt ALT N6      &kp DEL         &none   &none
+                &none   &none           &none           &kp F7          &kp F8          &kp F9                  &kp N1          &kp N2          &kp N3          &none           &none   &none
+                                                        &none           &equal          &trans                  &lt NAV SPACE   &mt RALT ENTER  &none
             >;
         };
 
@@ -72,7 +72,7 @@
         mv      {key-positions = <30 31>; bindings = <&kp V>; layers = <DEF>; COMBO;};
         mk      {key-positions = <31 32>; bindings = <&kp K>; layers = <DEF>; COMBO;};
 
-        mzero   {key-positions = <30 31>; bindings = <&kp N0>; layers = <NUM>; COMBO;};
+        mzero   {key-positions = <30 31>; bindings = <&kp N0>; layers = <EXT>; COMBO;};
 
 
         // GRAVE, APOS
