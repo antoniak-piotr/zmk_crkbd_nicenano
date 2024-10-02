@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  '0':
+  DEF:
   - {type: none}
   - {type: none}
   - ESC
@@ -39,11 +39,11 @@ layers:
   - {type: none}
   - {type: none}
   - {t: '=', h: LWIN}
-  - {t: _, h: '1'}
-  - {t: SPACE, h: '2'}
+  - {t: _, h: EXT}
+  - {t: SPACE, h: NAV}
   - {t: ENTER, h: RALT}
   - {type: none}
-  '1':
+  EXT:
   - {type: none}
   - {type: none}
   - ESC
@@ -83,10 +83,10 @@ layers:
   - {type: none}
   - {t: '=', h: LWIN}
   - {type: held}
-  - {t: SPACE, h: '2'}
+  - {t: SPACE, h: NAV}
   - {t: ENTER, h: RALT}
   - {type: none}
-  '2':
+  NAV:
   - {type: none}
   - {type: none}
   - ESC
@@ -125,90 +125,90 @@ layers:
   - {type: none}
   - {type: none}
   - {t: '=', h: LWIN}
-  - {t: _, h: '1'}
+  - {t: _, h: EXT}
   - {type: held}
   - {t: ENTER, h: RALT}
   - {type: none}
 combos:
 - p: [5, 6]
   k: CAPS
-  l: ['0']
+  l: [DEF]
   w: 41.0
 - p: [17, 18]
   k: CWRD
-  l: ['0']
+  l: [DEF]
   w: 41.0
 - p: [3, 4]
   k: Q
-  l: ['0']
+  l: [DEF]
 - p: [4, 5]
   k: B
-  l: ['0']
+  l: [DEF]
 - p: [27, 28]
   k: Z
-  l: ['0']
+  l: [DEF]
 - p: [28, 29]
   k: X
-  l: ['0']
+  l: [DEF]
 - p: [6, 7]
   k: J
-  l: ['0']
+  l: [DEF]
 - p: [7, 8]
   k: P
-  l: ['0']
+  l: [DEF]
 - p: [30, 31]
   k: V
-  l: ['0']
+  l: [DEF]
 - p: [31, 32]
   k: K
-  l: ['0']
+  l: [DEF]
 - p: [15, 27]
   k: F10
-  l: ['1']
+  l: [EXT]
 - p: [16, 28]
   k: F11
-  l: ['1']
+  l: [EXT]
 - p: [17, 29]
   k: F12
-  l: ['1']
+  l: [EXT]
 - p: [30, 31]
   k: 0)
-  l: ['1']
+  l: [EXT]
 - p: [5, 17]
   k: '`~'
-  l: ['0']
+  l: [DEF]
 - p: [6, 18]
   k: '''"'
-  l: ['0']
+  l: [DEF]
 - p: [17, 29]
   k: .:\
-  l: ['0']
+  l: [DEF]
 - p: [18, 30]
   k: ',;/'
-  l: ['0']
+  l: [DEF]
 - p: [19, 31]
   k: (<[{
-  l: ['0']
+  l: [DEF]
   w: 31.0
 - p: [20, 32]
   k: )>}]
-  l: ['0']
+  l: [DEF]
   w: 31.0
 - p: [15, 27]
   k: +*
-  l: ['0']
+  l: [DEF]
 - p: [16, 28]
   k: -/
-  l: ['0']
+  l: [DEF]
 - p: [3, 15]
   k: '!?'
-  l: ['0']
+  l: [DEF]
 - p: [4, 16]
   k: '#$%'
-  l: ['0']
+  l: [DEF]
 - p: [7, 19]
   k: ^@
-  l: ['0']
+  l: [DEF]
 - p: [8, 20]
   k: '&|'
-  l: ['0']
+  l: [DEF]

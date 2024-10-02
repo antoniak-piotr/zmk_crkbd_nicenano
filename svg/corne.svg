@@ -167,8 +167,8 @@ text.combo {
   /* font-weight: bold; */
 }
 </style>
-<g transform="translate(30, 0)" class="layer-0">
-<text x="0" y="28" class="label" id="x_x">0</text>
+<g transform="translate(30, 0)" class="layer-DEF">
+<text x="0" y="28" class="label" id="DEF">DEF</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key none keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none"/>
@@ -317,14 +317,14 @@ text.combo {
 <g transform="translate(351, 224) rotate(30.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">_</text>
-<a href="#x_x">
-<text x="0" y="32" class="key hold layer-activator">1</text>
+<a href="#EXT">
+<text x="0" y="32" class="key hold layer-activator">EXT</text>
 </a></g>
 <g transform="translate(489, 224) rotate(-30.0)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
-<a href="#x_x">
-<text x="0" y="32" class="key hold layer-activator">2</text>
+<a href="#NAV">
+<text x="0" y="32" class="key hold layer-activator">NAV</text>
 </a></g>
 <g transform="translate(554, 213) rotate(-15.0)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -428,8 +428,8 @@ text.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 331)" class="layer-1">
-<text x="0" y="28" class="label" id="x_x">1</text>
+<g transform="translate(30, 331)" class="layer-EXT">
+<text x="0" y="28" class="label" id="EXT">EXT</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key none keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none"/>
@@ -581,8 +581,8 @@ text.combo {
 <g transform="translate(489, 224) rotate(-30.0)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
-<a href="#x_x">
-<text x="0" y="32" class="key hold layer-activator">2</text>
+<a href="#NAV">
+<text x="0" y="32" class="key hold layer-activator">NAV</text>
 </a></g>
 <g transform="translate(554, 213) rotate(-15.0)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -610,8 +610,8 @@ text.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 661)" class="layer-2">
-<text x="0" y="28" class="label" id="x_x">2</text>
+<g transform="translate(30, 661)" class="layer-NAV">
+<text x="0" y="28" class="label" id="NAV">NAV</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key none keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none"/>
@@ -748,8 +748,8 @@ text.combo {
 <g transform="translate(351, 224) rotate(30.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">_</text>
-<a href="#x_x">
-<text x="0" y="32" class="key hold layer-activator">1</text>
+<a href="#EXT">
+<text x="0" y="32" class="key hold layer-activator">EXT</text>
 </a></g>
 <g transform="translate(489, 224) rotate(-30.0)" class="key held keypos-39">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key held"/>
