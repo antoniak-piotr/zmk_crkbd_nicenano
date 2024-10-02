@@ -20,7 +20,7 @@
                 &none   &none           &kp ESC         &kp W           &kp F           &kp G                   &kp M           &kp L           &kp U           &kp BSPC        &none   &none
                 &none   &none           &kp TAB         &mt ALT A       &mt CTL R       &mt SFT S               &mt SFT N       &mt CTL E       &mt ALT I       &kp DEL         &none   &none
                 &none   &none           &none           &kp C           &kp D           &kp T                   &kp H           &kp O           &kp Y           &none           &none   &none
-                                                        &none           &equal          &lt EXT UNDER           &lt NAV SPACE   &mt RALT ENTER  &none
+                                                        &none           &mt LWIN EQUAL  &lt EXT UNDER           &lt NAV SPACE   &mt RALT ENTER  &none
             >;
         };
 
@@ -29,7 +29,7 @@
                 &none   &none           &kp ESC         &kp F1          &kp F2          &kp F3                  &kp N7          &kp N8          &kp N9          &kp BSPC        &none   &none
                 &none   &none           &kp TAB         &mt ALT F4      &mt CTL F5      &mt SFT F6              &mt SFT N4      &mt CTL N5      &mt ALT N6      &kp DEL         &none   &none
                 &none   &none           &none           &kp F7          &kp F8          &kp F9                  &kp N1          &kp N2          &kp N3          &none           &none   &none
-                                                        &none           &equal          &trans                  &lt NAV SPACE   &mt RALT ENTER  &none
+                                                        &none           &mt LWIN EQUAL  &trans                  &lt NAV SPACE   &mt RALT ENTER  &none
             >;
         };
 
@@ -38,7 +38,7 @@
                 &none   &none           &kp ESC         &none           &none           &none                   &none           &none           &none           &kp BSPC        &none   &none
                 &none   &none           &kp TAB         &none           &none           &none                   &kp LEFT        &kp UP          &kp RIGHT       &kp DEL         &none   &none
                 &none   &none           &none           &none           &none           &none                   &kp LC(LEFT)    &kp DOWN        &kp LC(RIGHT)   &none           &none   &none
-                                                        &none           &equal          &lt EXT UNDER           &trans          &mt RALT ENTER  &none
+                                                        &none           &mt LWIN EQUAL  &lt EXT UNDER           &trans          &mt RALT ENTER  &none
             >;
         };
     };
@@ -61,19 +61,22 @@
         cwrd    {key-positions = <17 18>; bindings = <&caps_word>; layers = <DEF>; COMBO;}; // CAPSWORD
         // nwrd    {key-positions = <24 25>; bindings = <&num_word>; layers = <DEF COL>; COMBO;};                  // NUMWORD
 
-        // MISSING LETTERS
-        mq      {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF>; COMBO;};
-        mb      {key-positions = <4 5>; bindings = <&kp B>; layers = <DEF>; COMBO;};
-        mz      {key-positions = <27 28>; bindings = <&kp Z>; layers = <DEF>; COMBO;};
-        mx      {key-positions = <28 29>; bindings = <&kp X>; layers = <DEF>; COMBO;};
+        // MISSING LETTERS ON DEF LAYER
+        dq      {key-positions = <3 4>; bindings = <&kp Q>; layers = <DEF>; COMBO;};
+        db      {key-positions = <4 5>; bindings = <&kp B>; layers = <DEF>; COMBO;};
+        dz      {key-positions = <27 28>; bindings = <&kp Z>; layers = <DEF>; COMBO;};
+        dx      {key-positions = <28 29>; bindings = <&kp X>; layers = <DEF>; COMBO;};
 
-        mj      {key-positions = <6 7>; bindings = <&kp J>; layers = <DEF>; COMBO;};
-        mp      {key-positions = <7 8>; bindings = <&kp P>; layers = <DEF>; COMBO;};
-        mv      {key-positions = <30 31>; bindings = <&kp V>; layers = <DEF>; COMBO;};
-        mk      {key-positions = <31 32>; bindings = <&kp K>; layers = <DEF>; COMBO;};
+        dj      {key-positions = <6 7>; bindings = <&kp J>; layers = <DEF>; COMBO;};
+        dp      {key-positions = <7 8>; bindings = <&kp P>; layers = <DEF>; COMBO;};
+        dv      {key-positions = <30 31>; bindings = <&kp V>; layers = <DEF>; COMBO;};
+        dk      {key-positions = <31 32>; bindings = <&kp K>; layers = <DEF>; COMBO;};
 
-        mzero   {key-positions = <30 31>; bindings = <&kp N0>; layers = <EXT>; COMBO;};
-
+        // MISSING NUMBERS AND FUNCTION KEYS ON EXT LAYER
+        ef10    {key-positions = <15 27>; bindings = <&kp F10>; layers = <EXT>; COMBO;};
+        ef11    {key-positions = <16 28>; bindings = <&kp F11>; layers = <EXT>; COMBO;};
+        ef12    {key-positions = <17 29>; bindings = <&kp F12>; layers = <EXT>; COMBO;};
+        en0     {key-positions = <30 31>; bindings = <&kp N0>; layers = <EXT>; COMBO;};
 
         // GRAVE, APOS
         grave   {key-positions = <5 17>; bindings = <&kp GRAVE>; layers = <DEF>; COMBO;};
