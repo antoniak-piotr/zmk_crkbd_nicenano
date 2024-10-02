@@ -83,7 +83,7 @@ layers:
   - {type: none}
   - {t: '=', h: LWIN}
   - {type: held}
-  - SPACE
+  - {t: SPACE, h: '2'}
   - {t: ENTER, h: RALT}
   - {type: none}
   '2':
@@ -125,7 +125,7 @@ layers:
   - {type: none}
   - {type: none}
   - {t: '=', h: LWIN}
-  - _
+  - {t: _, h: '1'}
   - {type: held}
   - {t: ENTER, h: RALT}
   - {type: none}
