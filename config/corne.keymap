@@ -2,9 +2,9 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEF 0           // QWERTY
-#define NUM 1           // liczby
-#define NAV 2           // nawigacja
-#define CONF 3          // konfiguracja (np. Bluetooth)
+#define NUM 1           // NUMBER & FUNCTION KEYS
+#define NAV 2           // NAVIGATION
+#define SYS 3           // SYSTEM (Bluetooth configuration, etc.)
 
 #define SFT LSHFT
 #define CTL LCTRL
@@ -129,7 +129,7 @@
 
     behaviors {
         MORPH(mequal,   &kp EQUAL,  &assign,            MOD_LSFT|MOD_RSFT)
-        HOLD(equal,     &kp WIN,    &mequal)
+        HOLD(equal,     &kp LWIN,   &mequal)
 
         MORPH(sdot,     &kp DOT,    &kp COLON,          MOD_LSFT|MOD_RSFT)
         MORPH(scomma,   &kp COMMA,  &kp SEMI,           MOD_LSFT|MOD_RSFT)
