@@ -76,7 +76,9 @@
         ef10    {key-positions = <15 27>; bindings = <&kp F10>; layers = <EXT>; COMBO;};
         ef11    {key-positions = <16 28>; bindings = <&kp F11>; layers = <EXT>; COMBO;};
         ef12    {key-positions = <17 29>; bindings = <&kp F12>; layers = <EXT>; COMBO;};
-        en0     {key-positions = <30 31>; bindings = <&kp N0>; layers = <EXT>; COMBO;};
+        ezero   {key-positions = <30 39>; bindings = <&kp N0>; layers = <EXT>; COMBO;};
+        ecomma  {key-positions = <31 40>; bindings = <&kp COMMA>; layers = <EXT>; COMBO;};
+        edot    {key-positions = <32 41>; bindings = <&kp DOT>; layers = <EXT>; COMBO;};
 
         // GRAVE, APOS
         grave   {key-positions = <5 17>; bindings = <&kp GRAVE>; layers = <DEF>; COMBO;};
