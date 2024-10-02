@@ -38,18 +38,18 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - {t: '%', h: LWIN}
-  - {t: '=', h: ':='}
-  - {t: SPACE, h: _}
+  - {t: '=', h: LWIN, s: '&assign'}
+  - {t: _, h: '1'}
+  - {t: SPACE, h: '2'}
   - {t: ENTER, h: RALT}
   - {type: none}
   '1':
   - {type: none}
   - {type: none}
   - ESC
-  - '-'
-  - _
-  - {type: none}
+  - F1
+  - F2
+  - F3
   - 7&
   - 8*
   - 9(
@@ -58,40 +58,40 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
-  - 4$
-  - 5%
-  - 6^
+  - TAB
+  - {t: F4, h: LALT}
+  - {t: F5, h: LCTRL}
+  - {t: F6, h: LSHFT}
+  - {t: 4$, h: LSHFT}
+  - {t: 5%, h: LCTRL}
+  - {t: 6^, h: LALT}
   - DEL
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: none}
-  - {type: none}
-  - {type: none}
+  - F7
+  - F8
+  - F9
   - 1!
   - 2@
   - 3#
-  - 0)
   - {type: none}
   - {type: none}
   - {type: none}
-  - LWIN
-  - SPACE
-  - ENTER
-  - BSPC
+  - {type: none}
+  - {t: '=', h: LWIN, s: '&assign'}
+  - {type: held}
+  - {t: SPACE, h: '2'}
+  - {t: ENTER, h: RALT}
   - {type: none}
   '2':
   - {type: none}
   - {type: none}
   - ESC
-  - '-'
-  - _
+  - {type: none}
+  - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
@@ -101,7 +101,7 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: none}
+  - TAB
   - {type: none}
   - {type: none}
   - {type: none}
@@ -117,17 +117,17 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: none}
+  - {t: <WORD, h: '$$mdi:chevron-double-left$$'}
   - {t: DOWN, h: '$$mdi:chevron-down$$'}
+  - {t: WORD>, h: '$$mdi:chevron-double-right$$'}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: none}
-  - LWIN
-  - SPACE
-  - ENTER
-  - BSPC
+  - {t: '=', h: LWIN, s: '&assign'}
+  - {t: _, h: '1'}
+  - {type: held}
+  - {t: ENTER, h: RALT}
   - {type: none}
 combos:
 - p: [5, 6]
@@ -162,6 +162,18 @@ combos:
 - p: [31, 32]
   k: K
   l: ['0']
+- p: [15, 27]
+  k: F10
+  l: ['1']
+- p: [16, 28]
+  k: F11
+  l: ['1']
+- p: [17, 29]
+  k: F12
+  l: ['1']
+- p: [30, 31]
+  k: 0)
+  l: ['1']
 - p: [5, 17]
   k: '`~'
   l: ['0']
