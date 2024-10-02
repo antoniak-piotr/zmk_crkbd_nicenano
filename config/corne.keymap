@@ -20,7 +20,7 @@
                 &none   &none           &kp ESC         &kp W           &kp F           &kp G                   &kp M           &kp L           &kp U           &kp BSPC        &none   &none
                 &none   &none           &kp TAB         &mt ALT A       &mt CTL R       &mt SFT S               &mt SFT N       &mt CTL E       &mt ALT I       &kp DEL         &none   &none
                 &none   &none           &none           &kp C           &kp D           &kp T                   &kp H           &kp O           &kp Y           &none           &none   &none
-                                                        &none           &equal          &lt NUM UNDER           &lt NAV SPACE   &mt RALT ENTER  &none
+                                                        &none           &equal          &lt EXT UNDER           &lt NAV SPACE   &mt RALT ENTER  &none
             >;
         };
 
@@ -38,7 +38,7 @@
                 &none   &none           &kp ESC         &none           &none           &none                   &none           &none           &none           &kp BSPC        &none   &none
                 &none   &none           &kp TAB         &none           &none           &none                   &kp LEFT        &kp UP          &kp RIGHT       &kp DEL         &none   &none
                 &none   &none           &none           &none           &none           &none                   &kp LC(LEFT)    &kp DOWN        &kp LC(RIGHT)   &none           &none   &none
-                                                        &none           &equal          &lt NUM UNDER           &trans          &mt RALT ENTER  &none
+                                                        &none           &equal          &lt EXT UNDER           &trans          &mt RALT ENTER  &none
             >;
         };
     };
