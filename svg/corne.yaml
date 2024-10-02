@@ -10,7 +10,7 @@ layers:
   - M
   - L
   - U
-  - BSPC
+  - DEL
   - {type: none}
   - {type: none}
   - {type: none}
@@ -22,7 +22,7 @@ layers:
   - {t: N, h: LSHFT}
   - {t: E, h: LCTRL}
   - {t: I, h: LALT}
-  - DEL
+  - BSPC
   - {type: none}
   - {type: none}
   - {type: none}
@@ -53,7 +53,7 @@ layers:
   - 7&
   - 8*
   - 9(
-  - BSPC
+  - DEL
   - {type: none}
   - {type: none}
   - {type: none}
@@ -65,7 +65,7 @@ layers:
   - {t: 4$, h: LSHFT}
   - {t: 5%, h: LCTRL}
   - {t: 6^, h: LALT}
-  - DEL
+  - BSPC
   - {type: none}
   - {type: none}
   - {type: none}
@@ -96,7 +96,7 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - BSPC
+  - DEL
   - {type: none}
   - {type: none}
   - {type: none}
@@ -108,7 +108,7 @@ layers:
   - {t: LEFT, h: '$$mdi:chevron-left$$'}
   - {t: UP, h: '$$mdi:chevron-up$$'}
   - {t: RIGHT, h: '$$mdi:chevron-right$$'}
-  - DEL
+  - BSPC
   - {type: none}
   - {type: none}
   - {type: none}
@@ -171,13 +171,13 @@ combos:
 - p: [17, 29]
   k: F12
   l: [EXT]
-- p: [30, 39]
+- p: [18, 30]
   k: 0)
   l: [EXT]
-- p: [31, 40]
+- p: [19, 31]
   k: ',<'
   l: [EXT]
-- p: [32, 41]
+- p: [20, 32]
   k: .>
   l: [EXT]
 - p: [5, 17]

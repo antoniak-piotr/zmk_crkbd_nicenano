@@ -17,8 +17,8 @@
             //  0       1               2               3               4               5                       6               7               8               9               10              11
         DEF_layer {
             bindings = <
-                &none   &none           &kp ESC         &kp W           &kp F           &kp G                   &kp M           &kp L           &kp U           &kp BSPC        &none   &none
-                &none   &none           &kp TAB         &mt ALT A       &mt CTL R       &mt SFT S               &mt SFT N       &mt CTL E       &mt ALT I       &kp DEL         &none   &none
+                &none   &none           &kp ESC         &kp W           &kp F           &kp G                   &kp M           &kp L           &kp U           &kp DEL         &none   &none
+                &none   &none           &kp TAB         &mt ALT A       &mt CTL R       &mt SFT S               &mt SFT N       &mt CTL E       &mt ALT I       &kp BSPC        &none   &none
                 &none   &none           &none           &kp C           &kp D           &kp T                   &kp H           &kp O           &kp Y           &none           &none   &none
                                                         &none           &mt LWIN EQUAL  &lt EXT UNDER           &lt NAV SPACE   &mt RALT ENTER  &none
             >;
@@ -26,8 +26,8 @@
 
         EXT_layer {
             bindings = <
-                &none   &none           &kp ESC         &kp F1          &kp F2          &kp F3                  &kp N7          &kp N8          &kp N9          &kp BSPC        &none   &none
-                &none   &none           &kp TAB         &mt ALT F4      &mt CTL F5      &mt SFT F6              &mt SFT N4      &mt CTL N5      &mt ALT N6      &kp DEL         &none   &none
+                &none   &none           &kp ESC         &kp F1          &kp F2          &kp F3                  &kp N7          &kp N8          &kp N9          &kp DEL         &none   &none
+                &none   &none           &kp TAB         &mt ALT F4      &mt CTL F5      &mt SFT F6              &mt SFT N4      &mt CTL N5      &mt ALT N6      &kp BSPC        &none   &none
                 &none   &none           &none           &kp F7          &kp F8          &kp F9                  &kp N1          &kp N2          &kp N3          &none           &none   &none
                                                         &none           &mt LWIN EQUAL  &trans                  &lt NAV SPACE   &mt RALT ENTER  &none
             >;
@@ -35,8 +35,8 @@
 
         NAV_layer {
             bindings = <
-                &none   &none           &kp ESC         &none           &none           &none                   &none           &none           &none           &kp BSPC        &none   &none
-                &none   &none           &kp TAB         &none           &none           &none                   &kp LEFT        &kp UP          &kp RIGHT       &kp DEL         &none   &none
+                &none   &none           &kp ESC         &none           &none           &none                   &none           &none           &none           &kp DEL         &none   &none
+                &none   &none           &kp TAB         &none           &none           &none                   &kp LEFT        &kp UP          &kp RIGHT       &kp BSPC        &none   &none
                 &none   &none           &none           &none           &none           &none                   &kp LC(LEFT)    &kp DOWN        &kp LC(RIGHT)   &none           &none   &none
                                                         &none           &mt LWIN EQUAL  &lt EXT UNDER           &trans          &mt RALT ENTER  &none
             >;
@@ -76,9 +76,9 @@
         ef10    {key-positions = <15 27>; bindings = <&kp F10>; layers = <EXT>; COMBO;};
         ef11    {key-positions = <16 28>; bindings = <&kp F11>; layers = <EXT>; COMBO;};
         ef12    {key-positions = <17 29>; bindings = <&kp F12>; layers = <EXT>; COMBO;};
-        ezero   {key-positions = <30 39>; bindings = <&kp N0>; layers = <EXT>; COMBO;};
-        ecomma  {key-positions = <31 40>; bindings = <&kp COMMA>; layers = <EXT>; COMBO;};
-        edot    {key-positions = <32 41>; bindings = <&kp DOT>; layers = <EXT>; COMBO;};
+        ezero   {key-positions = <18 30>; bindings = <&kp N0>; layers = <EXT>; COMBO;};
+        ecomma  {key-positions = <19 31>; bindings = <&kp COMMA>; layers = <EXT>; COMBO;};
+        edot    {key-positions = <20 32>; bindings = <&kp DOT>; layers = <EXT>; COMBO;};
 
         // GRAVE, APOS
         grave   {key-positions = <5 17>; bindings = <&kp GRAVE>; layers = <DEF>; COMBO;};
