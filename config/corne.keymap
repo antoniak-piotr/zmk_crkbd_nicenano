@@ -6,157 +6,35 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-
-#define DEF 0
-#define GRN 1
-#define RED 2
-#define ORG 3
-#define CFG 4
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <GRN RED>;
-            then-layer = <ORG>;
-        };
-    };
-};
-
-/ {
-    macros {
-        ZMK_MACRO(end_ent,
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&kp END &kp ENTER>;
-        )
-    };
-};
-
-/ {
-    behaviors {
-        bspdel: backspace_delete {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_DELETE";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            //keep-mods = <(MOD_RSFT)>;
-        };
-        
-        bdm: backspace_delete_mod {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BACKSPACE_DELETE_ALT";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&kp>, <&bspdel>;
-        };
-    };
-};
-
-&mt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
-    global-quick-tap;
-};
-
-&lt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
-    global-quick-tap;
-};
-
-&caps_word {
-    continue-list = <UNDERSCORE N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 BSPC DEL>;
-};
-
-// #include "combos.dtsi"
-
-#define ________ &trans
-#define XXXXXXXX &none
-
-// Modifiers
-#define Z_SFT &mt LSHFT Z
-#define X_WIN &mt LWIN X
-#define C_ALT &mt LALT C
-#define V_CTL &mt LCTL V
-
-#define M_CTL &mt LCTL M
-#define COM_ALT &mt LALT COMMA
-#define DOT_WIN &mt LWIN DOT
-#define FSL_SFT &mt RSHFT FSLH
-
-#define LBKT_ALT &mt LALT LBKT
-#define BSL_SFT &mt RSHFT BSLH
-
-#define ESC_WIN &mt LWIN ESC
-//#define BSP_ALT &mt RALT BSPC
-#define BSP_ALT &bdm RALT 0
-
-// Layers
-#define Q_CFG &lt CFG Q
-#define ESC_RED &lt RED ESC
-#define ENT_RED &lt RED ENTER
-#define SPC_GRN &lt GRN SPACE
-#define UND_GRN &lt GRN UNDER
-
-// Bluetooth
-#define BT_1 &bt BT_SEL 0
-#define BT_2 &bt BT_SEL 1
-#define BT_3 &bt BT_SEL 2
-
-/ {
-//  #           #           #           #           #           #           #           #           #           #           #           #           #           #
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+
+        ground {
             bindings = <
-    XXXXXXXX    Q_CFG       &kp W       &kp E       &kp R       &kp T                               &kp Y       &kp U       &kp I       &kp O       &kp P       XXXXXXXX
-    XXXXXXXX    &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &kp SEMI    XXXXXXXX
-    XXXXXXXX    Z_SFT       &kp X       C_ALT       V_CTL       &kp B                               &kp N       M_CTL       COM_ALT     &kp DOT     FSL_SFT     XXXXXXXX
-                                                    ESC_WIN     ENT_RED     XXXXXXXX    XXXXXXXX    SPC_GRN     BSP_ALT
+&kp TAB    &kp Q  &kp W  &kp E     &kp R     &kp T        &kp Y      &kp U     &kp I      &kp O    &kp P     &kp BSPC
+&kp LSHFT  &kp A  &kp S  &kp D     &kp F     &kp G        &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V     &kp B        &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mo 1
+                         &kp LGUI  &kp LALT  &kp SPACE    &kp ENTER  &kp BSPC  &mo 2
             >;
         };
 
-        green_layer {
+        nums {
             bindings = <
-    XXXXXXXX    &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                              &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      XXXXXXXX
-    XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            &kp MINUS   &kp EQUAL   &kp LPAR    &kp RPAR    &kp COLON   XXXXXXXX
-    XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    XXXXXXXX    XXXXXXXX                            &kp GRAVE   &kp SQT     LBKT_ALT    &kp RBKT    BSL_SFT     XXXXXXXX
-                                                    ESC_WIN     ENT_RED    XXXXXXXX    XXXXXXXX    ________    &kp DEL
+&kp F1  &kp F2                &kp F3            &kp F4          &kp F5         &kp F6      &kp F7     &kp F8            &kp F9           &kp F10            &kp F11                &kp F12
+&trans  &kp N1                &kp N2            &kp N3          &kp N4         &kp N5      &kp N6     &kp N7            &kp N8           &kp N9             &kp N0                 &kp BSPC
+&trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LESS_THAN  &kp PLUS    &kp MINUS  &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &trans
+                                                &trans          &trans         &trans      &trans     &trans            &trans
             >;
         };
 
-        red_layer {
+        special {
             bindings = <
-    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    &kp PSCRN   XXXXXXXX
-    XXXXXXXX    &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                              &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     XXXXXXXX
-    XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    &kp LCTL    &kp F11                             &kp F12     &kp LCTRL   &kp LALT    XXXXXXXX    &kp RSHFT   XXXXXXXX
-                                                    ESC_WIN     ________    XXXXXXXX    XXXXXXXX    UND_GRN     XXXXXXXX
-            >;
-        };
-
-        orange_layer {
-            bindings = <
-    XXXXXXXX    &kp ESC     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    &bspdel     XXXXXXXX
-    XXXXXXXX    &kp TAB     XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    &kp LEFT    &kp UP      &kp RIGHT   &kp ENTER   XXXXXXXX
-    XXXXXXXX    &kp LSHFT   XXXXXXXX    &kp LALT    &kp LCTL    XXXXXXXX                            XXXXXXXX    &kp HOME    &kp DOWN    &kp END     &kp RSHFT   XXXXXXXX
-                                                    ESC_WIN     ________    XXXXXXXX    XXXXXXXX    ________    XXXXXXXX
-            >;
-        };
-
-        config_layer {
-            bindings = <
-    XXXXXXXX    ________    BT_1        BT_2        BT_3        XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX
-    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX
-    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX                            XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX
-                                                    &bt BT_CLR  XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX    XXXXXXXX
+&trans  &kp GRAVE  &kp SQT    &kp DOUBLE_QUOTES  &trans    &kp BACKSPACE    &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &none  &none  &kp BACKSPACE
+&trans  &kp PG_UP  &kp PG_DN  &kp Q              &kp UP    &kp E            &kp INSERT       &kp HOME        &kp PAGE_UP      &none  &none  &none
+&trans  &kp HOME   &kp END    &kp LEFT           &kp DOWN  &kp RIGHT        &kp DELETE       &kp END         &kp PAGE_DOWN    &none  &none  &none
+                              &trans             &trans    &trans           &trans           &trans          &trans
             >;
         };
     };
