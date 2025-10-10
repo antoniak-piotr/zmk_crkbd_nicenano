@@ -12,7 +12,7 @@
 #define GRN 1
 #define RED 2
 #define ORG 3
-#define CFG 4
+#define CFG 4 
 
 / {
     conditional_layers {
